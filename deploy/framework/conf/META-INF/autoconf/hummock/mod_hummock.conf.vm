@@ -1,0 +1,19 @@
+# load httpd 2.0.63 module
+#LoadModule hummock_module ${@appName@_hummock_home}/client/bin/mod_hummock.so
+
+# load httpd 2.2.15 module
+LoadModule hummock_module ${@appName@_hummock_home}/client/bin/mod_hummock_httpd_2.2.so
+<IfModule mod_hummock.c>
+    # hummockclient conf file full path
+    ClientConfPath ${@appName@_deployhome}/conf/hummock/hummockclient.conf
+    
+    # list-type remote-ip cookie-list http-header-list
+    LogFormat "\"%{ListInfo}i\" %a \"%{CookieInfo}n\" \"%{HttpHeaderInfo}n\"" hummockclient
+
+    # read remote ip from special field, format: [HeaderIN|SubProcessEnv|Note]:FieldName
+    # RemoteIP HeaderIN:ORIG_CLIENT_IP
+    # LogFormat "\"%{ListInfo}i\" %{ORIG_CLIENT_IP}i \"%{CookieInfo}n\" \"%{HttpHeaderInfo}n\"" hummockclient
+
+    # hummockclient conf file can be specified by -f
+    CustomLog "|${@appName@_hummock_home}/client/bin/hummockclient -k start -f ${@appName@_deployhome}/conf/hummock/hummockclient.conf" hummockclient   
+</IfModule>

@@ -1,0 +1,1 @@
+<div id="footer">$cmsTemplate.setTemplate("footer/footer.vm")</div>

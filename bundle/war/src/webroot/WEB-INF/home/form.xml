@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:services="http://www.alibaba.com/schema/services"
+	xmlns:fm-conditions="http://www.alibaba.com/schema/services/form/conditions"
+	xmlns:fm-validators="http://www.alibaba.com/schema/services/form/validators"
+	xmlns="http://www.alibaba.com/schema/services/form/validators"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.alibaba.com/schema/services http://localhost:8080/schema/services.xsd
+        http://www.alibaba.com/schema/services/form/conditions http://localhost:8080/schema/services-form-conditions.xsd
+        http://www.alibaba.com/schema/services/form/validators http://localhost:8080/schema/services-form-validators.xsd
+        http://www.springframework.org/schema/beans http://localhost:8080/schema/www.springframework.org/schema/beans/spring-beans.xsd
+    ">
+	<services:form postOnlyByDefault="true">
+		<services:group name="csrfCheck">
+			<services:field name="csrfToken">
+				<csrf-validator>
+					<message>提交的数据已过期</message>
+				</csrf-validator>
+			</services:field>
+		</services:group>
+		
+		<services:group name="createMovieForm" extends="csrfCheck">
+			<services:field name="id" displayName="视频id"/>
+			<services:field name="type" displayName="视频类型"/>
+			<services:field name="subject" displayName="视频名称">
+				<required-validator message="必须填写${displayName}" />
+				<string-length-validator maxLength="40"
+					minLength="0">
+					<message>${displayName}长度不能超过40</message>
+				</string-length-validator>
+			</services:field>
+			<services:field name="year" displayName="年份">
+				<string-length-validator maxLength="10"
+					minLength="0">
+					<message>${displayName}长度不能超过10</message>
+				</string-length-validator>
+			</services:field>
+			<services:field name="actors" displayName="演员">
+				<string-length-validator maxLength="40"
+					minLength="0">
+					<message>${displayName}长度不能超过40</message>
+				</string-length-validator>
+			</services:field>
+			<services:field name="director" displayName="导演">
+				<string-length-validator maxLength="40"
+					minLength="0">
+					<message>${displayName}长度不能超过40</message>
+				</string-length-validator>
+			</services:field>
+			<services:field name="language" displayName="语言">
+				<string-length-validator maxLength="40"
+					minLength="0">
+					<message>${displayName}长度不能超过40</message>
+				</string-length-validator>
+			</services:field>
+			<services:field name="area" displayName="地区">
+				<string-length-validator maxLength="40"
+					minLength="0">
+					<message>${displayName}长度不能超过40</message>
+				</string-length-validator>
+			</services:field>
+			<services:field name="picUrl" displayName="主题图片">
+				<string-length-validator maxLength="400"
+					minLength="0">
+					<message>${displayName}长度不能超过400</message>
+				</string-length-validator>
+			</services:field>
+			<services:field name="detail" displayName="描述">
+				<string-length-validator maxLength="2000"
+					minLength="0">
+					<message>${displayName}长度不能超过2000</message>
+				</string-length-validator>
+			</services:field>
+		</services:group>
+	</services:form>
+</beans:beans>

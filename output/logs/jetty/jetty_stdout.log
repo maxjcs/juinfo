@@ -1,0 +1,11 @@
+INFO: configuring "log4j" using jar:file:/F:/workspace/juinfo/deploy/target/web-deploy/jetty_server/webapps/root.war!/WEB-INF/log4j.xml
+ - with property localAddress = 134.96.42.45
+ - with property localHost = maxjcs-PC
+ - with property loggingCharset = UTF-8
+ - with property loggingLevel = error
+ - with property loggingRoot = F:/workspace/juinfo/output/logs
+
+AbandonedObjectPool is used (org.apache.commons.dbcp.AbandonedObjectPool@4a3a3c)
+   LogAbandoned: false
+   RemoveAbandoned: true
+   RemoveAbandonedTimeout: 180

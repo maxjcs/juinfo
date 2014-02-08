@@ -1,0 +1,161 @@
+#set( $tmpJs = $!page.scripts.add("http://yunqigou.com/ueditor/editor_config.js") )
+#set( $tmpJs = $!page.scripts.add("http://yunqigou.com/ueditor/editor_all.js") )
+$!page.addStyleSheet("/css/manage/page/createitem.css")
+
+<div class="doc">
+	<div class="content">
+	    <div class="c-title c-line-whiteSmoke">
+	    	 发布新视频    #if(${isSuccess}) <strong><font color="red"> 恭喜，发布成功!!!  </font></strong>  #end
+	    </div>
+		#set($group=$form.createMovieForm.defaultInstance)
+		<form method="post" id="form1" action="/home/createMovie.htm">
+		$csrfToken.hiddenField
+		<input type="hidden" name="action" value="MovieAction"/>
+		<input type="hidden" name="event_submit_do_create" value="true" />
+		<div class="formclass">
+			<table class="c-table">
+				<tr class="c-line-white">
+					<td class="c-td-name">视频名称：</td>
+					<td class="c-td-value">
+						<input type="text" name="$!group.subject.key" value="$!group.subject.value">
+						<font color="red">*</font>
+					</td>
+					#if($!group.subject.message)
+		            <span class="error">* $!group.subject.message</span>
+		        	#end
+				</tr>
+				<tr class="c-line-white">
+					<td class="c-td-name">视频类型：</td>
+					<td class="c-td-value">
+						<select name="$!group.type.key">
+						   <option value="kehuan" #if("$!group.type.value" == "kehuan") selected #end>科幻</option>
+						   <option value="dongzuo" #if("$!group.type.value" == "dongzuo") selected #end >动作</option>
+						   <option value="aiqing" #if("$!group.type.value" == "aiqing") selected #end >爱情</option>
+						   <option value="xiju" #if("$!group.type.value" == "xiju") selected #end>喜剧</option>
+						   <option value="kongbu" #if("$!group.type.value" == "kongbu") selected #end>恐怖</option>
+						   <option value="juqing" #if("$!group.type.value" == "juqing") selected #end>剧情</option>
+						   <option value="zhanzheng" #if("$!group.type.value" == "zhanzheng") selected #end>战争</option>
+						   <option value="donghua" #if("$!group.type.value" == "donghua") selected #end>动画</option>
+						   <option value="zongyi" #if("$!group.type.value" == "zongyi") selected #end>综艺</option>
+						   <option value="guoju" #if("$!group.type.value" == "guoju") selected #end>国剧</option>
+						   <option value="taiju" #if("$!group.type.value" == "taiju") selected #end>台剧</option>
+						   <option value="riju" #if("$!group.type.value" == "riju") selected #end>日剧</option>
+						   <option value="meiju" #if("$!group.type.value" == "meiju") selected #end>美剧</option>
+						   <option value="hanju" #if("$!group.type.value" == "hanju") selected #end>韩剧</option>
+						</select>
+					</td>
+					#if($!group.type.message)
+		            <span class="error">* $!group.type.message</span>
+		        	#end
+				</tr>
+				<tr class="c-line-white">
+					<td class="c-td-name">年份：</td>
+					<td class="c-td-value">
+						<input type="text" name="$!group.year.key" value="$!group.year.value">
+					</td>
+					#if($!group.year.message)
+		            <span class="error">* $!group.year.message</span>
+		        	#end
+				</tr>
+				<tr class="c-line-white">
+					<td class="c-td-name">演员：</td>
+					<td class="c-td-value">
+						<input type="text" name="$!group.actors.key" value="$!group.actors.value">
+					</td>
+					#if($!group.actors.message)
+		            <span class="error">* $!group.actors.message</span>
+		        	#end
+				</tr>
+				<tr class="c-line-white">
+					<td class="c-td-name">导演：</td>
+					<td class="c-td-value">
+						<input type="text" name="$!group.director.key" value="$!group.director.value">
+					</td>
+					#if($!group.director.message)
+		            <span class="error">* $!group.director.message</span>
+		        	#end
+				</tr>
+				<tr class="c-line-white">
+					<td class="c-td-name">语言：</td>
+					<td class="c-td-value">
+						<input type="text" name="$!group.language.key" value="$!group.language.value">
+					</td>
+					#if($!group.language.message)
+		            <span class="error">* $!group.language.message</span>
+		        	#end
+				</tr>
+				<tr class="c-line-white">
+					<td class="c-td-name">地区：</td>
+					<td class="c-td-value">
+						<input type="text" name="$!group.area.key" value="$!group.area.value">
+					</td>
+					#if($!group.area.message)
+		            <span class="error">* $!group.area.message</span>
+		        	#end
+				</tr>
+				<tr class="c-line-white">
+					<td class="c-td-name">主题图片url：</td>
+					<td class="c-td-value">
+						<input type="text" name="$!group.picUrl.key" value="$!group.picUrl.value">
+						<font color="red">*</font>
+					</td>
+					#if($!group.picUrl.message)
+		            <span class="error">* $!group.picUrl.message</span>
+		        	#end
+				</tr>
+				
+				<tr class="c-line-white">
+					<td class="c-td-name">
+						详细信息：
+					</td>
+					<td class="c-td-value">
+						&nbsp;
+					</td>
+				</tr>
+				<tr class="c-line-whiteSmoke">
+					<td   colspan="2" >
+						<div id="myEditor" class="baidu-editor">
+							<script type="text/javascript" id="editor">
+							</script>
+						</div>
+						<div style="display:none">
+							<textarea  id="detail" name="$!group.detail.key">#SLITERAL($!group.detail.value)</textarea>
+						</div>
+						
+					</td>
+				</tr>
+				<tr class="c-line-white">
+					<td class="c-td-name">
+						<input type="button" name="submit11" value="提交" onclick="submitIt()" >
+					</td>
+					<td class="c-td-value"><input type="reset" name="reset11" value="重置" ></td>
+				</tr>
+			</table>
+		</div>
+		</form>
+	</div>
+</div>
+
+<script type="text/javascript">
+    var editor = new UE.ui.Editor();
+    editor.render('editor'); 
+    
+    
+    function submitIt(){
+    	getContent();
+        document.getElementById("form1").submit();
+    }
+    
+    function getContent(){
+        document.getElementById("detail").value=editor.getContent();
+    }
+    
+    function setContent(){
+        editor.setContent('#SLITERAL($!group.detail.value)');
+    }
+    
+    //延时执行setContent操作
+    setTimeout("setContent()",1000);
+
+</script>
+

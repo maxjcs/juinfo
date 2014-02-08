@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="GB2312"?>
+<config>
+	<group name="deploy script framkwork">
+		<property name="@appName@.production" defaultValue="false" description="是否生产模式"/>
+		<property name="@appName@.unix.user" defaultValue="admin" description="Linux下apache运行的用户"/>
+		<property name="@appName@.domainName" defaultValue="china.alibaba.com" description="应用域名"/>
+		<!-- 基础软件路径 -->
+		<property name="@appName@.javahome" defaultValue="/usr/alibaba/java" description="JDK的目录"/>
+		<property name="@appName@.httpdhome" defaultValue="/usr/alibaba/httpd" description="apache的目录"/>
+		<property name="@appName@.jettyhome" defaultValue="/usr/alibaba/jetty" description="jetty的目录"/>
+		<!-- 应用路径 -->
+		<property name="@appName@.deployhome" defaultValue="${user.home}/web-deploy" description="应用deploy目录"/>
+		<property name="@appName@.jettyserverhome" defaultValue="${@appName@_deployhome}/jetty_server" description="jetty server的目录"/>
+		<property name="@appName@.output" defaultValue="${user.home}/output" description="应用output目录"/>
+		<!-- 端口 -->
+		<property name="@appName@.port" defaultValue="80" description="apache运行端口"/>
+		<property name="@appName@.appserver.port" defaultValue="7001" description="web应用运行的端口"/>
+	</group>
+    
+    <script>
+		<!-- apache config -->
+        <generate template="httpd/httpd.conf.vm" destfile="conf/httpd/httpd.conf" charset="GBK"/>
+		<generate template="httpd/httpd_base.conf.vm" destfile="conf/httpd/httpd_base.conf" charset="GBK"/>
+		<generate template="httpd/mod_proxy.conf.vm" destfile="conf/httpd/mod_proxy.conf" charset="GBK"/>
+		<!-- jetty config -->
+	    <generate template="jetty/conf/jetty.xml.vm" destfile="conf/jetty/conf/jetty.xml" charset="GBK"/>
+		<generate template="jetty/conf/jetty-logging.xml.vm" destfile="conf/jetty/conf/jetty-logging.xml" charset="GBK"/>
+		<generate template="jetty/conf/start.ini.vm" destfile="conf/jetty/conf/start.ini" charset="GBK"/>
+		<!-- framework -->
+        <generate template="bin/env.sh.vm" destfile="bin/env.sh" charset="GBK"/>        
+        <generate template="bin/env.bat.vm" destfile="bin/env.bat" charset="GBK"/> 
+		<generate template="bin/base_env.sh.vm" destfile="bin/base_env.sh" charset="GBK"/>        
+        <generate template="bin/base_env.bat.vm" destfile="bin/base_env.bat" charset="GBK"/> 
+    </script>
+</config>

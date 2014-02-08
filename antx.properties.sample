@@ -1,0 +1,20 @@
+dataopen.production       = false
+
+dataopen.datasource  = jdbc/dataopenDataSource
+dataopen.deployhome  = F:/workspace/dataopen/deploy/target/web-deploy
+dataopen.domainName  = d-test.china.alibaba.com
+dataopen.httpdhome   = /usr/alibaba/httpd
+
+dataopen.appserver.port  = 7001
+dataopen.javahome         = C:/Program Files/Java/jdk1.6.0_18
+dataopen.jettyhome        = I:/jetty7.2.2
+dataopen.jettyserverhome  = ${dataopen_deployhome}/jetty_server
+dataopen.output           = F:/workspace/dataopen/output
+dataopen.port             = 80
+dataopen.templates  = F:/workspace/dataopen/deploy/templates
+dataopen.unix.user  = admin
+
+dataopen.database.driver.password  = etl
+dataopen.database.driver.password.encrypted  = 
+dataopen.database.driver.url       = jdbc:oracle:thin:@10.20.130.210:1521:dwtest
+dataopen.database.driver.username  = etl

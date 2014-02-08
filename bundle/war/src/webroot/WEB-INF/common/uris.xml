@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:services="http://www.alibaba.com/schema/services" xmlns:uris="http://www.alibaba.com/schema/services/uris"
+	xmlns="http://www.alibaba.com/schema/services/uris"
+	xmlns:uri-interceptors="http://www.alibaba.com/schema/services/uris/interceptors"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.alibaba.com/schema/services http://localhost:8080/schema/services.xsd
+        http://www.alibaba.com/schema/services/uris http://localhost:8080/schema/services-uris.xsd
+        http://www.alibaba.com/schema/services/uris/interceptors http://localhost:8080/schema/services-uris-interceptors.xsd
+        http://www.springframework.org/schema/beans http://localhost:8080/schema/www.springframework.org/schema/beans/spring-beans.xsd
+    ">
+
+	<services:uris>
+
+		<uri id="juinfo" exposed="true">
+			<serverURI>http://aiyuanbao.com:7001</serverURI>
+		</uri>
+		
+		<uri id="indexUrl" exposed="true" extends="juinfo">
+			<path>/home/page.htm</path>
+		</uri>
+		
+		<uri id="detailUrl" exposed="true" extends="juinfo">
+			<path>/home/detail.htm</path>
+		</uri>
+		
+		<uri id="playUrl" exposed="true" extends="juinfo">
+			<path>/home/play.htm</path>
+		</uri>
+		
+	</services:uris>
+</beans:beans>

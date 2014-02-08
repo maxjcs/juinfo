@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<connection-factories>
+    <tx-connection-factory>
+        <jndi-name>AlibabaWebxConnectionFactory</jndi-name>
+        <use-java-context>false</use-java-context>
+        <xa-transaction/>
+        <rar-name>jms-ra.rar</rar-name>
+        <connection-definition>org.jboss.resource.adapter.jms.JmsConnectionFactory</connection-definition>
+        <config-property name="SessionDefaultType" type="java.lang.String">javax.jms.Queue</config-property>
+        <config-property name="JmsProviderAdapterJNDI" type="java.lang.String">java:/DefaultJMSProvider</config-property>
+        <max-pool-size>20</max-pool-size>
+        <security-domain-and-application>JmsXARealm</security-domain-and-application>
+    </tx-connection-factory>
+</connection-factories>

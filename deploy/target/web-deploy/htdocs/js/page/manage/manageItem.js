@@ -1,0 +1,10 @@
+$(document).ready(function(){
+	
+	/**  œ¬º‹…Ã∆∑ **/
+	$(".downitem").click(function(){
+		var batchId = $(this).attr("dataparamid");
+		$("#batchId").attr("value",batchId);
+		$("#form1").submit();
+	}
+	);
+});

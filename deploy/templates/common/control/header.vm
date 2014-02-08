@@ -1,0 +1,45 @@
+<div id="alibar"> $cmsTemplate.setTemplate("alibar/standard.vm")</div>
+<div id="header" class="w952">
+    <div class="dataopen-masthead fd-clr">
+        <div class="dataopen-logo">
+            <div class="ali-logo">
+                <h1>
+                    <a title="阿里巴巴" href="http://www.1688.com/" class="main-logo"><img width="153" height="37" alt="阿里巴巴" src="http://i01.c.aliimg.com/cms/upload/homepage/logo-v4.png"></a>
+                    <a class="sub-logo" title="数据超市" href="${indexUrl}">
+                        <span class="sub-logo-txt">数据超市</span>
+                        <span class="sub-logo-url">d.1688.com</span>
+                    </a>
+                </h1>
+            </div>
+        </div>
+        <div class="dataopen-nav">
+            <ul class="dataopen-nav-container fd-clr">
+                <li class="dataopen-index-li"><a href="${indexUrl}" class="nav-item">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+                <li class="dataopen-open-li"><a href="${dataopenUrl}" class="nav-item">数据开放</a></li>
+                <li class="dataopen-lib-li">
+                    <a href="#" class="nav-item">指标小库&nbsp;<i class="arrow"></i></a>
+                    <div class="fd-hide lib-subnav">
+                        <i class="horn"></i>
+                        <ul class="subnav">
+                            <li><a href="${ilibintroUrl}">小库简介</a></li>
+                            <li><a href="${allindexUrl}">全部指标</a></li>
+                            <li><a href="${allentityUrl}">全部实体</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dataopen-product-li"><a href="${productsUrl}" class="nav-item">数据产品</a></li>
+                <li class="dataopen-doc-li"><a href="${doccenterUrl}" class="nav-item">文档中心</a></li>
+            </ul>
+        </div>
+        <!--
+        <div class="dataopen-search">
+            <div class="dataopen-search-enter">
+                <input id="dataopen-search-input" name="keywords" placeholder="请输入关键字" autocomplete="off" accesskey="s" />
+            </div>
+            <div class="dataopen-search-button">
+                <button id="dataopen-search-submit" type="submit"></button>
+            </div>
+        </div>
+        -->
+    </div>
+</div>

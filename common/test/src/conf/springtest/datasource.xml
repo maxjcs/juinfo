@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="GB2312"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd  
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd  
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName">
+	
+    <!-- ======================================================================== -->
+    <!--  DataSource���塣                                                        -->
+    <!-- ======================================================================== -->
+	<bean id="opensqlDataSource"
+		class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.alibaba.china.jdbc.SimpleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@10.20.130.210:1521:dwtest" />
+		<property name="username" value="etl" />
+		<property name="password" value="etl" />
+		<property name="connectionProperties"><value>bigStringTryClob=true;clientEncoding=GBK;defaultRowPrefetch=50;serverEncoding=ISO-8859-1</value></property>
+	</bean>
+	
+	<!-- ======================================================================== -->
+    <!--  TransactionManager���塣                                                -->
+    <!-- ======================================================================== -->
+    <bean id="transactionManager"
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource">
+            <ref local="opensqlDataSource" />
+        </property>
+    </bean>
+	
+      <!-- ======================================================================== -->
+    <!--  iBatis SQL map���塣                                                    -->
+    <!-- ======================================================================== -->
+     <bean id="opensqlSqlMapClient"
+        class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+         <property name="dataSource">
+            <ref local="opensqlDataSource" />
+        </property>
+        <property name="configLocation">
+            <value>springtest/sqlmap.xml</value>
+        </property>
+    </bean>
+    <!-- ======================================================================== -->
+    <!--  DAO�Ļ����á�                                                         -->
+    <!-- ======================================================================== -->
+    <bean id="baseOpensqlSqlMapClientDAO" abstract="true">
+        <property name="dataSource">
+            <ref local="opensqlDataSource" />
+        </property>
+        <property name="sqlMapClient">
+            <ref local="opensqlSqlMapClient" />
+        </property>
+    </bean>
+</beans>

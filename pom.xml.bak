@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>app</groupId>
+	<artifactId>juinfo</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>juinfo</name>
+	<properties>
+		<maven>2.2.1</maven>
+		<file_encoding>GBK</file_encoding>
+	</properties>
+	<modules>
+		<module>/bundle/war</module>
+		<module>/web/common</module>
+		<module>dal</module>
+		<module>/biz/common</module>
+		<module>/web/home</module>
+		<module>/common/config</module> 
+<!--		<module>/common/test</module> -->
+		<module>/deploy</module>
+<!--		<module>task</module> -->
+	</modules>
+	<dependencies>
+		 
+		<!-- WebX 3 -核心模块 -->
+		<dependency>
+		  <groupId>test</groupId>
+		  <artifactId>webx3.core</artifactId>
+		  <version>3.0.4</version>
+		</dependency>
+		<!-- WebX 3 -兼容模块 -->
+		<dependency>
+			<groupId>test</groupId>
+			<artifactId>webx3.compat</artifactId>
+			<version>3.0.4</version>
+		</dependency>
+		
+		<!-- WebX 3 -单元测试工具模块 -->
+<!--		<dependency>
+			<groupId>test</groupId>
+			<artifactId>webx3.test</artifactId>
+			<version>3.0.4</version>
+		</dependency>  -->
+		
+		<dependency>
+			<groupId>test</groupId>
+			<artifactId>misc.mail</artifactId>
+			<version>1.4</version>
+		</dependency>
+		
+		<dependency>                                   
+		  <groupId>external</groupId>                  
+		  <artifactId>mysql-connector-java</artifactId>
+		  <version>5.1.6</version>                     
+		</dependency>                                  
+		
+		<dependency>
+				<groupId>external</groupId>
+				<artifactId>sourceforge.spring</artifactId>
+				<version>2.5.6</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>external</groupId>
+		  <artifactId>sourceforge.spring.modules.webmvc</artifactId>
+		  <version>2.5.6.SEC02</version>
+		</dependency>
+		
+		<dependency>
+				<groupId>external</groupId>
+				<artifactId>ajax.json</artifactId>
+				<version>2.3</version>
+	 </dependency>
+	 
+	 	<dependency>
+				<groupId>external</groupId>
+				<artifactId>java.servlet</artifactId>
+				<version>2.3</version>
+		</dependency>
+		
+		
+		<dependency>
+				<groupId>external</groupId>
+				<artifactId>sourceforge.ibatis</artifactId>
+				<version>2.3.0</version>
+	 </dependency>
+	 
+	 <dependency>
+				<groupId>toolkit</groupId>
+				<artifactId>toolkit.common.logging</artifactId>
+				<version>1.0</version>
+	 </dependency>
+	 
+	 	<dependency>
+				<groupId>external</groupId>
+				<artifactId>jakarta.log4j</artifactId>
+				<version>1.2.16</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>external</groupId>
+		  <artifactId>org.slf4j.slf4j-api</artifactId>
+		  <version>1.5.6</version>
+		</dependency>
+		
+		<dependency>
+				<groupId>external</groupId>
+				<artifactId>org.slf4j.slf4j-log4j12</artifactId>
+				<version>1.5.6</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>commons-logging</groupId>
+		  <artifactId>commons-logging</artifactId>
+		  <version>1.1.1</version>
+		</dependency>
+		
+		<dependency>
+				<groupId>external</groupId>
+				<artifactId>sourceforge.spring</artifactId>
+				<version>2.5.6</version>
+			</dependency>
+			
+			<dependency>
+			  <groupId>external</groupId>
+			  <artifactId>sourceforge.cglib-nodep</artifactId>
+			  <version>2.1_3</version>
+			</dependency>
+			
+			<dependency>
+			  <groupId>external</groupId>
+			  <artifactId>dom4j</artifactId>
+			  <version>1.6.1</version>
+			</dependency>
+			
+			<dependency>
+			  <groupId>test</groupId>
+			  <artifactId>fasttext</artifactId>
+			  <version>1.3.0</version>
+			</dependency>
+			
+			<dependency>
+			  <groupId>fakepath</groupId>
+			  <artifactId>fasttext-utils</artifactId>
+			  <version>1.3.20</version>
+			</dependency>
+			
+			<dependency>
+			  <groupId>test</groupId>
+			  <artifactId>fasttext-css</artifactId>
+			  <version>1.3.20</version>
+			</dependency>
+			
+			<dependency>
+			  <groupId>test</groupId>
+			  <artifactId>fasttext-sec</artifactId>
+			  <version>1.3.20</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>external</groupId>
+				<artifactId>jakarta.velocity</artifactId>
+				<version>1.6.4</version>
+			</dependency>
+			
+			<dependency>
+			  <groupId>external</groupId>
+			  <artifactId>commons-fileupload</artifactId>
+			  <version>1.2.1</version>
+			</dependency>
+			
+			<dependency>
+			  <groupId>external</groupId>
+			  <artifactId>commons-dbcp</artifactId>
+			  <version>1.2.1</version>
+			</dependency>
+			
+			<dependency>
+		  <groupId>external</groupId>
+		  <artifactId>commons-collections</artifactId>
+		  <version>3.2.1</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>external</groupId>
+		  <artifactId>commons-lang</artifactId>
+		  <version>2.4</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>external</groupId>
+		  <artifactId>freemarker</artifactId>
+		  <version>2.3.16</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>external</groupId>
+		  <artifactId>commons-pool</artifactId>
+		  <version>1.2</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>external</groupId>
+		  <artifactId>commons-codec</artifactId>
+		  <version>1.4</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>external</groupId>
+		  <artifactId>ecs</artifactId>
+		  <version>1.4.2</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>external</groupId>
+		  <artifactId>commons-jexl</artifactId>
+		  <version>1.1</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>toolkit</groupId>
+		  <artifactId>toolkit.common.lang</artifactId>
+		  <version>1.0</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>external</groupId>
+		  <artifactId>oro</artifactId>
+		  <version>2.0.8</version>
+		</dependency>
+		
+		<dependency>
+	  <groupId>commons-httpclient</groupId>
+	  <artifactId>commons-httpclient</artifactId>
+	  <version>3.1</version>
+	</dependency>
+	
+<dependency>
+  <groupId>external</groupId>
+  <artifactId>misc.htmlparser</artifactId>
+  <version>1.6</version>
+</dependency>
+
+<dependency>
+  <groupId>webx</groupId>
+  <artifactId>toolkit_webx_all_in_one</artifactId>
+  <version>2.0.3</version>
+</dependency>
+<dependency>
+  <groupId>commons-configuration</groupId>
+  <artifactId>commons-configuration</artifactId>
+  <version>1.6</version>
+</dependency>
+<dependency>
+  <groupId>commons_jelly</groupId>
+  <artifactId>commons_jelly</artifactId>
+  <version>1.0</version>
+  <classifier>RC1</classifier>
+</dependency>
+<dependency>
+  <groupId>commons-beanutils</groupId>
+  <artifactId>commons-beanutils</artifactId>
+  <version>1.8.0</version>
+</dependency>	
+<dependency>
+  <groupId>test</groupId>
+  <artifactId>headquarters.biz.common</artifactId>
+  <version>1.1</version>
+</dependency>	
+</dependencies>
+	
+	
+		<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.4</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>src/java</source>
+							</sources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>add-test-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-test-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>src/java.test</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <useSystemClassLoader>true</useSystemClassLoader>
+                    <testFailureIgnore>false</testFailureIgnore>
+                    <argLine>-javaagent:"${settings.localRepository}/external/test.jmockit/0.999.10/test.jmockit-0.999.10.jar"</argLine>
+                    <junitArtifactName>com.alibaba.external:test.junit</junitArtifactName>
+                    <testNGArtifactName>com.alibaba.external:test.testng</testNGArtifactName>
+                </configuration>
+            </plugin>
+			<plugin>
+				<groupId>ali.plugins</groupId>
+				<artifactId>maven-springext-plugin</artifactId>
+				<version>1.0</version>
+			</plugin>
+		</plugins>
+
+		<sourceDirectory>src/java</sourceDirectory>
+		<testSourceDirectory>src/java.test</testSourceDirectory>
+		<resources>
+			<resource>
+				<directory>src/conf</directory>
+				<includes>
+					<include>**/*</include>
+				</includes>
+				<excludes>
+					<exclude>**/.svn/</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/conf.test</directory>
+				<includes>
+					<include>**/*</include>
+				</includes>
+				<excludes>
+					<exclude>**/.svn/</exclude>
+				</excludes>
+			</testResource>
+		</testResources>
+	</build>
+	
+	
+</project>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>fakepath</groupId>
+		<artifactId>framework</artifactId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>../../pom.xml</relativePath>
+	</parent>
+	<artifactId>framework.common.test</artifactId>
+	<packaging>jar</packaging>
+	<groupId>fakepath</groupId>
+	<name>common-test</name>
+	<description>Auto converted POM for common-test</description>
+	<dependencies>
+		  
+        
+		<dependency>
+			<groupId>fakepath</groupId>
+			<artifactId>testerx.jtester-ext</artifactId>
+			<version>1.0.4-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<groupId>fakepath</groupId>
+					<artifactId>java.j2ee</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>fakepath</groupId>
+					<artifactId>test.jmockit</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>fakepath</groupId>
+			<artifactId>toolkit.sandbox.jtester</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>fakepath</groupId>
+			<artifactId>test.jmockit</artifactId>
+		</dependency>
+	</dependencies>
+</project>

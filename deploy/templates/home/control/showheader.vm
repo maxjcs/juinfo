@@ -1,0 +1,78 @@
+<!--头部  开始-->
+<div class="i_top">      
+ <img src="/images/sy.gif" /> <a href="#">设为首页</a>&nbsp;&nbsp; <img src="/images/sc.gif" /> <a href="#">收藏本站</a>&nbsp;&nbsp;
+</div>
+<img src="/images/ico1.gif" class="topimg" />
+<div class="clear"></div>
+<a href="#"><img src="/images/logo.gif" class="logo" /></a>
+
+
+<div class="searchstyle">
+<input name="" type="text" class="textcss" />
+<input name="" type="button" class="bot" value="查询" />
+</div>
+<div class="hotsearch" >
+热门搜索：
+<a href="#">泰囧</a>
+<a href="#">西游(降魔)</a>
+<a href="#">少年派</a>
+</div>
+
+
+<div class="navstyle">
+<img src="/images/yuan_left.gif" class="nav_yuan" />
+<div class="navcon" >
+
+<div class="nav"> 
+
+
+<a href="http://www.yunqigou.com">首页</a>
+<a href="http://www.yunqigou.com?type=xiju">热门电影</a>
+<a href="http://www.yunqigou.com?type=juqing">热播电视剧</a>
+<a href="http://www.yunqigou.com?type=donghua">经典动漫</a>
+<a href="http://www.yunqigou.com?type=zongyi">综艺娱乐</a>
+
+
+</div>
+
+
+
+<div class="smallnav">
+<a href="http://www.yunqigou.com?type=kehuan">科幻片</a>&nbsp;&nbsp;
+<a href="http://www.yunqigou.com?type=xiju">喜剧片</a>&nbsp;&nbsp;
+<a href="http://www.yunqigou.com?type=juqing">剧情片</a>&nbsp;&nbsp;
+<a href="http://www.yunqigou.com?type=kongbu">恐怖片</a>&nbsp;&nbsp;
+<a href="http://www.yunqigou.com?type=dongzuo">动作片</a>&nbsp;&nbsp;
+<a href="http://www.yunqigou.com?type=aiqing">爱情片</a>&nbsp;&nbsp;
+<a href="http://www.yunqigou.com?type=zhanzheng">战争片</a>&nbsp;&nbsp;
+<a href="http://www.yunqigou.com?type=donghua">动画</a>&nbsp;&nbsp;
+<a href="http://www.yunqigou.com?type=zongyi">综艺</a>&nbsp;&nbsp;
+<a href="http://www.yunqigou.com?type=guoju">国剧</a>&nbsp;&nbsp;
+<a href="http://www.yunqigou.com?type=taiju">台剧</a>&nbsp;&nbsp;
+<a href="http://www.yunqigou.com?type=riju">日剧</a>&nbsp;&nbsp;
+<a href="http://www.yunqigou.com?type=hanju">韩剧</a>&nbsp;&nbsp;
+<a href="http://www.yunqigou.com?type=meiju">美剧</a>&nbsp;&nbsp;
+</div>
+
+
+
+</div>
+<img src="/images/yuan_right.gif" class="nav_yuan"/>
+</div>
+<div class="clear"></div>
+
+
+                          <!-- 头部  结束 -->
+
+
+<img src="/images/banner.gif" class="banner" />
+
+
+
+
+
+
+
+
+
+

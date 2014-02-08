@@ -1,0 +1,7 @@
+Last Configured at: Wed Mar 27 13:46:38 CST 2013
+
+Base URL: file:/F:/workspace/juinfo/common/config/src/conf/
+Descriptor: META-INF/autoconf/auto-config.xml
+
+Generating META-INF/autoconf/datasource.xml.vm => framework/bean/datasource.xml
+Generating META-INF/autoconf/biz-service.xml.vm => framework/bean/biz-service.xml

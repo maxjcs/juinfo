@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<!-- ========================================================== -->
+<!-- Configuration for ibatis sqlmap mapping. -->
+<!-- ========================================================== -->
+<sqlMap namespace="healthCheck">
+	<select id="ORA_QUERY_INT" resultClass="int" parameterClass="string">
+		<![CDATA[   select 1 from dual  ]]>
+	</select>
+</sqlMap>

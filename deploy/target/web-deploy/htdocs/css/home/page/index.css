@@ -1,0 +1,240 @@
+/* CSS Document */
+*{ padding:0px; margin:0px; font-size:12px; font-family:\5B8B\4F53;}
+body{ background:url(http://yunqigou.com/images/bg.gif) repeat-x; height:auto;}
+img{ border:0px;}
+.left{ float:left;}
+.right{ float:right;}
+a{ text-decoration:none;}
+a:hover{ text-decoration:underline;}
+ul li{ list-style:none;}
+.red{color:red;}
+.font16{ font-size:16px; font-family:\9ED1\4F53;}
+.huang{ color:#F47600;font-family:\5FAE\8F6F\96C5\9ED1; font-size:18px;font-weight:bold;}
+.pa15{ padding-left:25px; float:left;}
+
+/**  qq登陆样式 **/
+#qqLoginBtn{padding-top:3px;}
+
+
+.header{ width:990px; height:185px; margin:0 auto;}
+.top{ width:990px; height:30px; line-height:30px; color:#656565; font-family:\5FAE\8F6F\96C5\9ED1;float:left;}
+.top a{color:#656565;}
+.top span{ float:right; border-right:1px solid #EEEEEE; padding-left:12px; padding-right:12px; height:30px;}
+.top span img{ margin-bottom:-4px; margin-right:5px;}
+.top .left .c_login{color:blue;}
+.logo{ width:990px; height:105px; line-height:105px;float:left;}
+.logo .left{ padding-top:25px;}
+.logo .right{ font-size:24px;font-family:\5FAE\8F6F\96C5\9ED1;color:#999999; line-height:105px;}
+.logo .right img{ margin-bottom:-10px;}
+.menu{ width:990px; height:50px; background:#5FAE0A; float:left;}
+.menu ul{ float:left; height:50px; line-height:50px; width:600px;}
+.menu ul li{ width:110px; height:50px; float:left; text-align:center;}
+.menu ul li a{font-family:\5FAE\8F6F\96C5\9ED1; font-size:16px; color:#FFF;}
+.menu .select{ width:110px; height:50px; float:left; background:#FD7B03;}
+.menu ul li:hover{ width:110px; height:50px; float:left; background:#FD7B03;}
+.menu .qian{ width:250px;height:50px; margin-right:2px; background:url(http://yunqigou.com/images/qiandao.png) no-repeat left center; float:right; }
+.menu .qian .time{ width:55px; float:left; height:40px; text-align:center; color:#FFF; padding-top:8px; font-family:Arial; font-size:12px; }
+.menu .qian .qd{ width:137px; float:left; height:50px; line-height:50px; color:#656565;  text-align:center;}
+.menu .qian .qd a{ color:#656565;font-family:\5FAE\8F6F\96C5\9ED1; font-size:20px;}
+.menu .qian .day{ width:50px;  padding-top:25px; float:right; text-align:center; font-family:Adobe \9ED1\4F53 Std; font-size:20px; color:#999999;}
+.chang{ width:100%; height:292px; background:url(http://yunqigou.com/images/chang_bg.png) repeat-x;}
+.chang .c_img{ width:990px; height:292px; margin:0 auto;}
+
+.chang .c_img .img{ width:740px; height:292px; float:left;}
+.slider{margin:0px auto;width:740px;height:292px;position:relative;overflow:hidden;}
+.conbox{position:absolute;/*必要元素*/}
+.switcher{position:absolute; margin-top:262px;float:right;z-index:99; background:url(http://yunqigou.com/images/img_bg.png); width:740px; text-align:right;}
+.switcher a{float:left; height:30px; line-height:30px; width:30px; text-align:center; color:#FFF; font-family:\5FAE\8F6F\96C5\9ED1; font-size:16px;z-index:300;}
+.switcher a.cur,.switcher a:hover{background:#529E00;height:30px;line-height:30px;width:30px;color:#fff; z-index:300;}
+
+.chang .c_img .img img{ width:740px; height:292px;}
+.chang .c_img .gg{ width:235px; float:left; height:292px; background:#FFF; padding-left:15px;}
+.chang .c_img .gg .title{ border-bottom:2px solid #EDEDED; height:40px; line-height:40px;font-family:\5FAE\8F6F\96C5\9ED1; font-size:18px; color:#FD7B03; width:220px; float:left; }
+.chang .c_img .gg ul{ width:220px; float:left;}
+.chang .c_img .gg li{ width:200px; float:left; background:url(http://yunqigou.com/images/dian.png) no-repeat left center; padding-left:15px; line-height:35px;}
+.chang .c_img .gg li a{ color:#434343;font-family:\5FAE\8F6F\96C5\9ED1;}
+
+.gc{ width:990px; height:80px; background:url(http://yunqigou.com/images/123.png) no-repeat top center #454442; margin:0 auto;}
+.gc .left{ padding-top:45px; float:left; padding-left:105px; width:135px;font-family:\5FAE\8F6F\96C5\9ED1;color: #CBCBCB;font-size: 16px;}
+.gc .left a{ color:#CBCBCB; font-size:16px;font-family:\5FAE\8F6F\96C5\9ED1;}
+
+.one{ width:990px; margin:0 auto; height:450px; padding-top:20px;}
+.title{ width:990px; height:40px; line-height:40px; float:left;}
+.title .rp{ width:740px; height:40px; float:left;}
+.title .zx{ width:240px; float:left; height:40px; padding-left:10px;}
+.title .left{font-family:\5FAE\8F6F\96C5\9ED1; font-size:18px; font-weight:bold; color:#444444;}
+.title .right{ color:#656565;font-family:\5FAE\8F6F\96C5\9ED1; }
+.title .right a{color:#656565;font-family:\5FAE\8F6F\96C5\9ED1;}
+.title .right img{ margin-left:3px;}
+.one .bottom{ width:988px; height:390px; float:left; border:1px solid #DDDDDD; border-bottom:0px; background:url(http://yunqigou.com/images/bottom_bg.png) repeat-x bottom;}
+.one .bottom .left{ width:738px; height:390px; float:left;}
+.one .bottom .left .he{ width:246px; height:360px; float:left; padding-top:30px; text-align:center; padding-bottom:2px;}
+.one .bottom .left .he_img{ width:180px; height:180px;}
+.one .bottom .left .he p{ width:100%; height:30px; line-height:30px;font-family:\5FAE\8F6F\96C5\9ED1;color:#555555; float:left; text-align:center;}
+.gang{ color:#555555; background:url(http://yunqigou.com/images/gang.gif) left center; }
+.one .bottom .left .he .p_img{ height:53px; padding-top:5px;}
+.a24{ font-size:24px;font-family:\5FAE\8F6F\96C5\9ED1;color:#F47600; height:30px; line-height:30px; margin-left:10px;}
+.one .bottom .left .he .h_bottom{ width:245px; border-right:1px solid #FFF; height:60px; background:#F2F2F2; float:left;}
+.one .bottom .right{ float:right; height:389px; width:250px; background:url(http://yunqigou.com/images/zx_bg.png) repeat-y;}
+.one .bottom .right ul{ width:220px; padding-left:10px;}
+.one .bottom .right ul li{ padding-top:10px; height:85px; width:220px; float:left;}
+.one .bottom .right ul li span{ width:80px; height:80px; border:1px solid #DDDDDD; background:#FFF; float:left; text-align:center;}
+.one .bottom .right ul li span img{ width:46px; height:80px;}
+.one .bottom .right ul li p{ line-height:27px;float:left; width:120px; padding-left:10px;font-family:\5FAE\8F6F\96C5\9ED1;  color:#656565;}
+.one .bottom .right ul li p a{font-family:\5FAE\8F6F\96C5\9ED1;  color:#656565;}
+.one .bottom .left .he p span{margin-left:25xp;}
+.djs{ width:127px; background:url(http://yunqigou.com/images/djs.png) no-repeat; height:15px; float:left; margin-top:8px; color:#FFF; line-height:15px;font-family:\5FAE\8F6F\96C5\9ED1;}
+.barbox{height:18px;line-height:18px; float:left;width:220px;  height:30px; line-height:30px;font-family:\5FAE\8F6F\96C5\9ED1;color:#555555;padding-left:25px; text-align:left;}
+.barbox dt{float:left; font-size:12px;text-align:right;}
+.barbox dd{float:left;}
+.barbox dd.last{color:#999;}
+.barbox dd.barline{width:120px; background:#FFF; height:12px;overflow:hidden;display:inline;border-bottom:solid 1px #F4F4F4;border-right:solid 1px #F4F4F4; margin-top:10px;}
+.barbox dd.barline div.charts{height:10px;overflow:hidden;background:url(http://yunqigou.com/images/barbg.gif) repeat-x;}
+.barbox dd.barline div.charts.barred{background-position:0 0;border:1px solid #C2142C;}
+.barbox dd.barline div.charts.baryellow{background-position:0 -10px;border:1px solid #EFA804;}
+.barbox dd.barline div.charts.barblue{background-position:0 -20px;border:1px solid #67B708;}
+
+#demo{OVERFLOW: hidden; POSITION: relative}
+
+.two{ width:990px; margin:0 auto;height:200px;}
+.two ul{ width:978px; height:145px; float:left;border:1px solid #DDDDDD; background:url(http://yunqigou.com/images/bottom_bg.png) repeat-x bottom; padding-top:15px; padding-left:10px;overflow:hidden;}
+.two ul li{ width:140px; height:145px; float:left; padding-left:10px;padding-right:10px; text-align:center;}
+.two ul li p{ line-height:35px;font-family:\5FAE\8F6F\96C5\9ED1;  color:#656565;}
+.two ul li p a{font-family:\5FAE\8F6F\96C5\9ED1;  color:#656565;}
+.two ul li img{ width:60px; height:100px;}
+.inner{ width:978px; float:left;}
+
+.three{ height:45px; width:100%; background:#599E07; margin-top:25px; padding-top:15px; float:left;}
+.t_foorer{ width:990px; margin:0 auto; }
+.three .t_foorer .left{ width:330px; float:left; text-align:center; font-family:\5FAE\8F6F\96C5\9ED1; color:#FFF; font-size:24px;}
+.three .t_foorer .left img{ margin-bottom:-5px; margin-right:10px;}
+.three .t_foorer .left a{ font-family:\5FAE\8F6F\96C5\9ED1; color:#FFF; font-size:24px;}
+.footer{ width:100%; height:80px; text-align:center; font-family:\5FAE\8F6F\96C5\9ED1; color:#999999; line-height:25px; padding-top:20px; float:left }
+.footer a{font-family:\5FAE\8F6F\96C5\9ED1; color:#999999; margin-right:20px; }
+
+.tt{ width:42px; background:#FFF; height:192px; border:1px solid #ECECEC; border-bottom:0px; display:none;position:absolute; z-index:200;s}
+.tt a{ height:64px; border-bottom:1px solid #ECECEC; float:left; width:42px;}
+.mtop20{ margin-top:-20px; text-align:left; color:#FFF;}
+
+
+.main{ width:990px; margin:0 auto; height:auto;}
+
+.six{ width:990px; height:470px; padding-top:20px;background-color:white;}
+/*原图样式*/
+.smallClass{border:1px solid #CDCDCD;float:left;position:relative;padding:0px;cursor:pointer;}
+/*显示大图div样式，不能改名，此样式名写入js*/
+.JSWK_ZoomDIV {z-index: 100;position: absolute;top:0px;left:0px;width:100px;height:100px;background:#ffffff;border:1px solid #CCCCCC;display:none;text-align: center;overflow: hidden;}
+/*原图上的div游标样式，不能改名，此样式名写入js*/
+.JSWK_ZoomPuP {z-index: 10;display:none;position: absolute;top:0px;left:0px;width: 50px;height: 50px;border: 1px solid #aaa;background: #ffffff url(images/zoom.gif) 50% top  no-repeat;;opacity: 0.5;-moz-opacity: 0.5;-khtml-opacity: 0.5;filter: alpha(Opacity=50);}
+.six .left{ width:330px; padding-left:15px;}
+.six .left ul{ width:310px; height:50px; float:left; padding-top:10px;}
+.six .left ul li{ width:40px; height:40px; float:left; margin-right:5px; border:2px solid #CDCDCD; list-style:none; }
+.six .left ul li img{ width:40px; height:40px; float:left;}
+.six .left ul .select{ border:2px solid #F00;}
+.six .left p{ width:330px; float:left; height:40px; line-height:40px; color:#5D5D5D; font-family:\5FAE\8F6F\96C5\9ED1;}
+.six .left p img{ margin-bottom:-2px;}
+
+.six .right{float:left; width:590px;  height:auto; line-height:20px;}
+.six .right p{ width:100%;  color:#656565; font-family:Adobe \9ED1\4F53 Std; line-height:30px; height:auto; float:left;}
+.six .right .title{ color:#434343; font-family:Adobe \9ED1\4F53 Std; font-size:20px; line-height:30px;font-family:\5FAE\8F6F\96C5\9ED1;font-weight: bold}
+.six .ju{ color:#FD7B03; font-size:13px;font-family:\5FAE\8F6F\96C5\9ED1;}
+.six .text{ width:68px; height:27px; line-height:27px; border:0px; background:url(http://yunqigou.com/images/seven_05.png) no-repeat; padding-left:4px;}
+.six .btnXH{margin-left: 2px; width:85px; height:30px; border:0px; background:url(http://yunqigou.com/images/xuanHao.png) no-repeat; line-height:30px; margin-bottom:-10px;}
+.six .btnTong{ width:85px; height:30px; border:0px; background:url(http://yunqigou.com/images/btn.png) no-repeat; margin-bottom:-10px; color:#656565;}
+.six .btnClear{ width: 57px;height: 20px; border:0px; background:url(http://yunqigou.com/images/small_btn.png) no-repeat; margin-bottom:-10px; color:#656565;}
+
+.six .qdpx1{
+	float:left;
+}
+.six .qdpx{ width:135px; height:42px; border:0px; background:url(http://yunqigou.com/images/qdpx.png) no-repeat; margin-top:20px;}
+.six .p3{ float:left;}
+.six .p2{ float:left;margin-top:10px;}
+.six .xz{
+	height:35px;
+	float: left;
+	margin-top: 20px;
+	background-image:url(http://yunqigou.com/images/top_bg.png);
+	background-repeat: repeat-x;
+	background-position:bottom;
+}
+
+.tan{ width:100%; background-color:#000; position:absolute; top:0px; left:0px; display:none; filter:alpha(opacity=30); z-index:100;opacity:0.3;}
+.ts{ width: 200px;height: 150px; border:1px solid #666; background:#EDF5F7;  position:absolute; z-index:200; display:none;}
+.ts .top{ width:100%; height:46px; background:url(http://yunqigou.com/images/ts_bg.png) repeat-x; float:left;}
+.ts .top .left{ float:left; padding-left:10px;font-family:\5FAE\8F6F\96C5\9ED1; border:0px; background:none; font-size:15px; letter-spacing:3px;font-weight:bold; color:#333; line-height:36px;}
+.ts .top .right{ padding-top:6px;}
+.ts .bottom{ float: left;text-align: center;color: red;font-size: 14px;font-family:\5FAE\8F6F\96C5\9ED1;width: 100%;height: auto;padding-top: 8px;}
+.ts .btnClose{float: left;margin: 33px 0px 0px 70px;width: 55px;height: 20px;border: 0px;background: url(http://yunqigou.com/images/small_btn.png) no-repeat;color: #656565;}
+
+.ts2{ width:420px; height:250px; border:1px solid #666; background:#fff;  position:absolute; z-index:200; display:none;}
+.ts2 .top{ width:100%; height:46px; background:url(http://yunqigou.com/images/ts_bg.png) repeat-x; float:left;}
+.ts2 .top .left{ float:left; padding-left:10px;font-family:\5FAE\8F6F\96C5\9ED1; border:0px; background:none; font-size:15px; letter-spacing:3px;font-weight:bold; color:#333; line-height:36px;}
+.ts2 .top .right{ padding-top:6px;}
+.ts2 .bottom{ float:left; width:100%; height:auto; padding-top:8px;}
+
+.seven{  width:990px; height:auto;padding-top:13px; float:left; }
+.seven .left{ width:330px;}
+.seven .top{ height:47px; line-height:47px;  border-bottom:1px solid #DDDDDD; background:#F1F1F1; width:990px;float:left;}
+.seven .top ul{ float:left;}
+.seven .top ul li{ width:134px; float:left; text-align:center;font-family:\5FAE\8F6F\96C5\9ED1; font-size:14px;}
+.seven .top .select{ width:134px; background:url(http://yunqigou.com/images/seven_01.png) no-repeat; height:48px;}
+.seven .top span{ width:132px; float:right; background:url(http://yunqigou.com/images/seven_02.png) no-repeat; height:47px; text-align:center; line-height:47px; }
+.seven .top span img{ margin-bottom:-8px;}
+.seven .top span a{ color:#656565;font-family:\5FAE\8F6F\96C5\9ED1; }
+.seven .bottom{ width:990px; float:left; height:auto; padding-top:20px;min-height: 490px;background-color:white;}
+.seven .bottom .ji{ width:990px; float:left; height:auto; display:none;}
+.seven .bottom .ji ul{ width:910px; margin-left:40px; float:left; text-align:center;height:40px;}
+.seven .bottom .ji ul li{ width:227px; float:left; line-height:40px; height:40px; color:#656565; font-family:\5FAE\8F6F\96C5\9ED1; font-size:13px;}
+.hui{ background:#F1F1F1; border-bottom:1px solid #DDDDDD;}
+.seven .bottom .ji .fy{ padding-right:40px;}
+
+/**  选号样式  ****/
+.selectNum{ width: 569px;height: 375px; border:1px solid #666; background:#fff;  position:absolute; z-index:200; display:none;}
+.selectNum .top{ width:100%; height:46px; background:url(http://yunqigou.com/images/ts_bg.png) repeat-x; float:left;}
+.selectNum .top .left{ float:left; padding-left:10px;font-family:\5FAE\8F6F\96C5\9ED1; border:0px; background:none; font-size:15px; letter-spacing:3px;font-weight:bold; color:#333; line-height:36px;}
+.selectNum .bottom{ float:left; width:100%; height:auto; padding-top:8px;}
+.selectNum .btnClose{margin: 10px 0px 0px 228px;width:85px; height:30px; border:0px; background:url(http://yunqigou.com/images/btn.png) no-repeat; margin-bottom:-10px; color:#656565;}
+
+.condition{
+	width:550px;
+	font-size: 16px;
+	font-family:\5FAE\8F6F\96C5\9ED1;
+}
+.condition .p2{ float:left;width:100%}
+.condition .p4{ float:left;margin-top:10px;width:100%}
+.p4 .t_zy{ float:right; text-align:right; color:#656565;font-family:\5FAE\8F6F\96C5\9ED1;}
+.condition .p3{ float:left;width:100%}
+.condition .p1{ float:left;margin:0px 0px 0px 5px;color:blue;width:100%}
+.condition .errormsg{
+	color:red;
+	font-size: 12px;
+	font-family:\5FAE\8F6F\96C5\9ED1;
+}
+.condition .text{ width:68px; height:27px; line-height:27px; border:0px; background:url(http://yunqigou.com/images/seven_05.png) no-repeat; padding-left:4px;}
+.condition .btnTong{ width:85px; height:30px; border:0px; background:url(http://yunqigou.com/images/btn.png) no-repeat; margin-bottom:0px; color:#656565;}
+.bottom .xz{height:auto; border-bottom:1px solid #F2F2F2; margin-top:0px; line-height:10px;  float:left;color:#656565; width:580px;}
+.xz ul{ padding-left:20px; width:570px; float:left;}
+.xz ul li{ width:98px; height:20px; margin-right:10px; margin-bottom:10px; background:#EEEEEE; border:0px; line-height:20px;text-align:center; float:left;}
+.xz .zong{ padding:10px 0px 0px 20px; width:570px; float:left;}
+.xz .selected_zong{ padding:10px 0px 0px 20px; width:570px; float:left;min-height: 70px;}
+.xz .dan{ width:98px; height:20px; margin-right:10px; margin-bottom:10px; background:#EEEEEE; border:0px; line-height:20px;text-align:center; float:left;}
+
+.xz .aa{ width:45px; height:20px; float:left; background:#DDDDDD; line-height:20px; color:#7F7F7F;font-family:\5FAE\8F6F\96C5\9ED1; font-weight:bold; }
+.xz .bb{ width:22px; height:20px; float:left; background:url(http://yunqigou.com/images/ren.png) no-repeat left center; padding-left:12px; color:#999999; }
+.xz .cc{ float:left;}
+.xz .add{ float:left;}
+.xz .cc img{ width:19px; height:20px;}
+.xz .tt1{ float:left; padding-top: 13px;width: 66px; height:20px; padding-left:2px;}
+.xz .tt2{ float:right; padding-top:10px; width:120px; height:30px; padding-left:20px;}
+.xz .tt3{ text-align:center; float:left;width:200px; color:#656565;font-family:\5FAE\8F6F\96C5\9ED1;padding-top:10px; padding-right:20px;}
+.xz .tt3 img{ margin-bottom:-5px;}
+.xz .tt3 .t_zy{ float:right; text-align:left; width:200px; color:#656565;font-family:\5FAE\8F6F\96C5\9ED1;padding-right:20px;}
+
+.xz .right{ padding-top:6px;}
+.xz .imgpos{padding-top:6px;}
+.xz .tt3 .zz{padding-top:10px;}
+.xz .bt{ float:left;}
+
+
+
+

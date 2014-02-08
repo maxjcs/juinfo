@@ -1,0 +1,22 @@
+#** -------------------------------------------
+ * œ‘ æjavascripts
+ * -------------------------------------------- *#
+#macro (showJavascripts)
+
+#foreach( $script in $page.scripts )
+<script type="text/javascript" src="$script" language="JavaScript"></script>
+#end
+
+#end
+
+
+#** -------------------------------------------
+ * œ‘ æstylesheets
+ * -------------------------------------------- *#
+#macro (showStylesheets)
+
+#foreach( $styleSheet in $page.styleSheets )
+<link rel="stylesheet" href="$styleSheet.Url" #if($styleSheet.Type != "" ) type="$styleSheet.Type" #end #if($styleSheet.Media != "") media="$styleSheet.Media" #end #if($styleSheet.Title != "") title="$styleSheet.Title" #end />
+#end
+
+#end

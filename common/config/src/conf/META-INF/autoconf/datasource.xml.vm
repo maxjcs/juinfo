@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+	<beans default-autowire="byName">
+		<!-- ======================================================================== -->
+		<!--  DataSource定义。                                                        -->
+		<!-- ======================================================================== -->
+		<bean id="frameworkDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+			<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+			<property name="url" value="$juinfo_database_driver_url" />
+			<property name="username" value="$juinfo_database_driver_username" />
+			<property name="password" value="$juinfo_database_driver_password" />
+			<property name="maxActive"><value>14</value></property>
+			<property name="initialSize"><value>1</value></property>
+			<property name="maxWait"><value>100000</value></property>
+			<property name="maxIdle"><value>30</value></property>
+			<property name="minIdle"><value>5</value></property>
+			<property name="removeAbandoned"><value>true</value></property>
+			<property name="removeAbandonedTimeout"><value>180</value></property>
+	      <!--  <property name="connectionProperties"><value>useUnicode=true&characterEncoding=utf-8</value></property> -->
+			<property name="timeBetweenEvictionRunsMillis"><value>60000</value></property>
+			<property name="minEvictableIdleTimeMillis"><value>1800000</value></property>
+		</bean>
+		
+		<!-- ======================================================================== -->
+		<!--  TransactionManager定义。                                                -->
+		<!-- ======================================================================== -->
+		<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+			<property name="dataSource">
+				<ref local="frameworkDataSource" />
+			</property>
+		</bean>
+		<!-- 程序控制的transaction的定义。 -->
+		<bean id="transactionTemplate" class="org.springframework.transaction.support.TransactionTemplate"/>
+		<!-- ======================================================================== -->
+		<!--  iBatis SQL map定义。                                                    -->
+		<!-- ======================================================================== -->
+		<bean id="frameworkSqlMapClient"
+		class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+			<property name="dataSource" ref="frameworkDataSource"/>
+			<property name="configLocation">
+				<value>framework/bean/sqlmap.xml</value>
+			</property>
+		</bean>
+		<!-- ======================================================================== -->
+		<!--  DAO的基本配置。                                                         -->
+		<!-- ======================================================================== -->
+		<bean id="baseframeworkSqlMapClientDAO" abstract="true">
+			<property name="dataSource">
+				<ref local="frameworkDataSource" />
+			</property>
+			<property name="sqlMapClient">
+				<ref local="frameworkSqlMapClient" />
+			</property>
+		</bean>
+	</beans>

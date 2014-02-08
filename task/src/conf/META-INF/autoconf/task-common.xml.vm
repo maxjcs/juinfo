@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-autowire="byName">
+     <!-- ======================================================================== -->
+    <!--  DataSource定义。                                                        -->
+    <!-- ======================================================================== -->
+    <bean id="opensqlDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
+		<property name="driverClassName" value="com.alibaba.druid.proxy.DruidDriver" />
+		<property name="url" value="$opensql_database_driver_url" />
+		<property name="username">
+		    <value>$opensql_database_driver_username</value>
+		</property>
+		<property name="password" value="$opensql_database_driver_password" />
+		<property name="maxActive"><value>14</value></property>
+        <property name="initialSize"><value>1</value></property>
+        <property name="maxWait"><value>60000</value></property>
+        <property name="maxIdle"><value>14</value></property>
+        <property name="minIdle"><value>1</value></property>
+        <property name="removeAbandoned"><value>true</value></property>
+        <property name="removeAbandonedTimeout"><value>180</value></property>
+        <property name="connectionProperties"><value>bigStringTryClob=true;clientEncoding=GBK;defaultRowPrefetch=50;serverEncoding=ISO-8859-1</value></property>
+		<property name="timeBetweenEvictionRunsMillis"><value>60000</value></property>
+		<property name="minEvictableIdleTimeMillis"><value>1800000</value></property>
+	</bean>
+	
+	
+	<!-- ======================================================================== -->
+    <!--  TransactionManager定义。                                                -->
+    <!-- ======================================================================== -->
+     <bean id="transactionManager"
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource">
+            <ref local="opensqlDataSource" />
+        </property>
+    </bean>
+	
+	 <!-- 程序控制的transaction的定义。 -->
+    <bean id="transactionTemplate" class="org.springframework.transaction.support.TransactionTemplate"/>
+    
+	
+      <!-- ======================================================================== -->
+    <!--  iBatis SQL map定义。                                                    -->
+    <!-- ======================================================================== -->
+    
+    <bean id="opensqlSqlMapClient"
+        class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property name="dataSource" ref="opensqlDataSource"/>
+        <property name="configLocation">
+            <value>classpath/task/sqlmap.xml</value>
+        </property>
+    </bean>
+    <!-- ======================================================================== -->
+    <!--  DAO的基本配置。                                                         -->
+    <!-- ======================================================================== -->
+     <bean id="baseOpensqlSqlMapClientDAO" abstract="true">
+        <property name="dataSource">
+            <ref local="opensqlDataSource" />
+        </property>
+        <property name="sqlMapClient">
+            <ref local="opensqlSqlMapClient" />
+        </property>
+	 </bean>
+</beans>

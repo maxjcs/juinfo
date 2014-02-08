@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="gb2312"?>
+<config description="">
+	
+	<group name="web">
+		<property name="juinfo.output" description=""/>
+	    <property name="juinfo.deployhome" description=""/>
+	    <property name="juinfo.templates" description=""/>
+	    <property name="juinfo.loggingRoot" defaultValue="${juinfo.output}/logs" description="log root "/>
+	    <property name="juinfo.loggingLevel" defaultValue="warn" description="log level"/>
+		<property name="juinfo.domainName" defaultValue="aiyuanbao.com" description="login serve"/>
+	</group>
+	
+	<group name="datasource">
+	    <property name="juinfo.datasource" defaultValue="jdbc/juinfoDataSource" description="juinfo 数据源"/>
+	    <property name="juinfo.database.driver.url" defaultValue="jdbc:mysql://localhost:3306/luckdb" description=""/>
+	    <property name="juinfo.database.driver.username" defaultValue="root" description=""/>
+	    <property name="juinfo.database.driver.password" defaultValue="root" description=""/>
+	</group>
+	
+	<script>
+	    <generate template="biz-service.xml.vm" destfile="framework/bean/biz-service.xml" charset="GBK"/>
+		<generate template="datasource.xml.vm" destfile="framework/bean/datasource.xml" charset="GBK"/>
+	</script>
+
+</config>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GB2312"?>
+<config description="juinfo_bundle_war">
+	<group name="web">
+	    <property name="juinfo.production" defaultValue="false"/>
+	</group>
+	
+	<script>
+        <generate template="web.xml.vm" destfile="WEB-INF/web.xml" charset="GBK"/>
+        <generate template="log4j.xml.vm" destfile="WEB-INF/log4j.xml" charset="GBK"/>
+        <generate template="resources.xml.vm" destfile="WEB-INF/common/resources.xml" charset="GBK"/>
+        <generate template="uris.xml.vm" destfile="WEB-INF/common/uris.xml" charset="GBK"/>
+		<generate template="pipeline.xml" destfile="WEB-INF/common/pipeline.xml" charset="GBK"/>
+		<generate template="webx.xml" destfile="WEB-INF/webx.xml" charset="GBK"/>
+	
+    </script>
+</config>

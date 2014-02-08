@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+
+<sqlMap namespace="Movie" >
+
+  <typeAlias alias="movieDO" type="com.hlx.juinfo.dal.biz.dal.dataobject.MovieDO" />
+
+  <resultMap id="movieDOResultMap" class="movieDO" >
+    <result property="id" column="id" />
+    <result property="subject" column="subject" />
+    <result property="year" column="year" />
+    <result property="actors" column="actors" />
+    <result property="director" column="director" />
+    <result property="detail" column="detail" />
+    <result property="picUrl" column="pic_url" />
+    <result property="starLevel" column="star_level" />
+    <result property="openUrl" column="open_url" />
+    <result property="type" column="type" />
+    <result property="language" column="language" />
+    <result property="area" column="area" />
+    <result property="gmtCreate" column="gmt_create" />
+    <result property="gmtModified" column="gmt_modified" />
+    <result property="flag" column="flag" />
+  </resultMap>
+
+  <sql id="movie_columns" >
+    a1.id, a1.subject, a1.year, a1.actors, a1.director, a1.detail, a1.pic_url, a1.star_level, 
+      a1.open_url, a1.type, a1.language, a1.area, a1.gmt_create, a1.gmt_modified, a1.flag
+      
+  </sql>
+
+  <sql id="movie_do_columns" >
+    a1.id, a1.subject, a1.year, a1.actors, a1.director, a1.detail, a1.pic_url, a1.star_level, 
+      a1.open_url, a1.type, a1.language, a1.area, a1.gmt_create, a1.gmt_modified, a1.flag
+      
+  </sql>
+
+  <sql id="queryParams" >
+    <dynamic prepend="WHERE" >
+      <isNotNull property="id" prepend="AND" >
+        <![CDATA[  
+        id = #id#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="subject" prepend="AND" >
+        <![CDATA[  
+        subject = #subject#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="year" prepend="AND" >
+        <![CDATA[  
+        year = #year#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="actors" prepend="AND" >
+        <![CDATA[  
+        actors = #actors#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="director" prepend="AND" >
+        <![CDATA[  
+        director = #director#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="detail" prepend="AND" >
+        <![CDATA[  
+        detail = #detail#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="picUrl" prepend="AND" >
+        <![CDATA[  
+        pic_url = #picUrl#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="starLevel" prepend="AND" >
+        <![CDATA[  
+        star_level = #starLevel#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="openUrl" prepend="AND" >
+        <![CDATA[  
+        open_url = #openUrl#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="type" prepend="AND" >
+        <![CDATA[  
+        type = #type#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="language" prepend="AND" >
+        <![CDATA[  
+        language = #language#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="area" prepend="AND" >
+        <![CDATA[  
+        area = #area#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="flag" prepend="AND" >
+        <![CDATA[  
+        flag = #flag#  
+        ]]>  
+      </isNotNull>
+    </dynamic>
+  </sql>
+
+  <sql id="doQueryParams" >
+    <dynamic prepend="WHERE" >
+      <isNotNull property="id" prepend="AND" >
+        <![CDATA[  
+        id = #id#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="subject" prepend="AND" >
+        <![CDATA[  
+        subject = #subject#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="year" prepend="AND" >
+        <![CDATA[  
+        year = #year#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="actors" prepend="AND" >
+        <![CDATA[  
+        actors = #actors#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="director" prepend="AND" >
+        <![CDATA[  
+        director = #director#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="detail" prepend="AND" >
+        <![CDATA[  
+        detail = #detail#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="picUrl" prepend="AND" >
+        <![CDATA[  
+        pic_url = #picUrl#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="starLevel" prepend="AND" >
+        <![CDATA[  
+        star_level = #starLevel#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="openUrl" prepend="AND" >
+        <![CDATA[  
+        open_url = #openUrl#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="type" prepend="AND" >
+        <![CDATA[  
+        type = #type#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="language" prepend="AND" >
+        <![CDATA[  
+        language = #language#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="area" prepend="AND" >
+        <![CDATA[  
+        area = #area#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="flag" prepend="AND" >
+        <![CDATA[  
+        flag = #flag#  
+        ]]>  
+      </isNotNull>
+    </dynamic>
+  </sql>
+
+  <insert id="insert" parameterClass="movieDO" >
+    INSERT INTO movie( id, subject, year, actors, director, detail, pic_url, star_level, 
+      open_url, type, language, area, gmt_create, gmt_modified, flag)
+     VALUES ( #id#, #subject#, #year#, #actors#, #director#, #detail#, #picUrl#, #starLevel#, 
+      #openUrl#, #type#, #language#, #area#, now(), now(), #flag#)
+    <selectKey keyProperty="id" resultClass="java.lang.Integer" >
+      SELECT LAST_INSERT_ID() AS value
+    </selectKey>
+  </insert>
+
+  <update id="update" parameterClass="movieDO" >
+    UPDATE movie   
+    <dynamic prepend="SET" >
+      <!--
+      <isNotNull property="id" prepend="," >
+        <![CDATA[  
+        id = #id#  
+        ]]>  
+      </isNotNull>
+      -->
+      <isNotNull property="subject" prepend="," >
+        <![CDATA[  
+        subject = #subject#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="year" prepend="," >
+        <![CDATA[  
+        year = #year#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="actors" prepend="," >
+        <![CDATA[  
+        actors = #actors#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="director" prepend="," >
+        <![CDATA[  
+        director = #director#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="detail" prepend="," >
+        <![CDATA[  
+        detail = #detail#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="picUrl" prepend="," >
+        <![CDATA[  
+        pic_url = #picUrl#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="starLevel" prepend="," >
+        <![CDATA[  
+        star_level = #starLevel#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="openUrl" prepend="," >
+        <![CDATA[  
+        open_url = #openUrl#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="type" prepend="," >
+        <![CDATA[  
+        type = #type#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="language" prepend="," >
+        <![CDATA[  
+        language = #language#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="area" prepend="," >
+        <![CDATA[  
+        area = #area#  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="gmtModified" prepend="," >
+        <![CDATA[  
+        gmt_modified = now()  
+        ]]>  
+      </isNotNull>
+      <isNotNull property="flag" prepend="," >
+        <![CDATA[  
+        flag = #flag#  
+        ]]>  
+      </isNotNull>
+    </dynamic>
+     WHERE id = #id#  
+  </update>
+
+  <select id="findByPrimaryKey" parameterClass="java.lang.Integer" resultMap="movieDOResultMap" >
+     SELECT 
+    <include refid="movie_do_columns" />
+    <![CDATA[  
+     FROM movie a1 WHERE id = #id#
+    ]]>  
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterClass="java.lang.Integer" >
+    <![CDATA[  
+     DELETE FROM movie WHERE id = #id#
+    ]]>  
+  </delete>
+
+  <select id="countByDOExample" parameterClass="movieDO" resultClass="java.lang.Integer" >
+    SELECT COUNT(id) AS num FROM movie 
+    <include refid="doQueryParams" />
+  </select>
+
+  <select id="findListByDO" resultMap="movieDOResultMap" parameterClass="movieDO" >
+     SELECT 
+    <include refid="movie_do_columns" />
+     FROM movie a1 
+    <include refid="doQueryParams" />
+  </select>
+  
+ <select id="findListByParam" resultMap="movieDOResultMap" parameterClass="map" >
+     SELECT 
+    <include refid="movie_do_columns" />
+     FROM movie a1 
+    <include refid="doQueryParams" />
+    
+    order by id desc
+    limit #startIndex#,15
+    
+  </select>
+  
+  <select id="countByParam" parameterClass="map" resultClass="java.lang.Integer" >
+    SELECT COUNT(id) AS num FROM movie 
+    <include refid="doQueryParams" />
+  </select>
+  
+</sqlMap>

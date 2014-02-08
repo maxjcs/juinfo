@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="gb2312"?>
+<config description="自动配置：opensql-task">
+    
+    <script>
+    <!-- 
+        <generate template="task-services.xml.vm" destfile="WORLDS-INF/classes/task/task-services.xml" charset="GBK"/>
+        <generate template="biz-service.xml.vm" destfile="WORLDS-INF/classes/task/biz-service.xml" charset="GBK"/>     
+        <generate template="log4j.xml.vm" destfile="WORLDS-INF/classes/task/log4j.xml" charset="GBK"/>
+      
+        <generate template="task-common.xml.vm" destfile="WORLDS-INF/classes/task/task-common.xml" charset="GBK"/>
+        <generate template="task-resource.xml.vm" destfile="WORLDS-INF/classes/task/task-resource.xml" charset="GBK"/>
+		<generate template="bean-external.xml.vm" destfile="WORLDS-INF/classes/task/bean-external.xml" charset="GBK" />
+		<generate template="opensearch-jobs.xml.vm" destfile="WORLDS-INF/classes/task/opensearch-jobs.xml" charset="GBK" />
+    -->
+		<generate template="bin/base_fun.sh.vm" destfile="bin/base_fun.sh" charset="GBK" />
+		<generate template="bin/crontab/BieeExternalTask.sh.vm" destfile="bin/crontab/BieeExternalTask.sh" charset="GBK" />
+		<generate template="bin/crontab/TaskExecuteTask.sh.vm" destfile="bin/crontab/TaskExecuteTask.sh" charset="GBK" />
+		<generate template="bin/crontab/FullFeedDataTask.sh.vm" destfile="bin/crontab/FullFeedDataTask.sh" charset="GBK" />
+		<generate template="bin/crontab/IncrementalFeedDataTask.sh.vm" destfile="bin/crontab/IncrementalFeedDataTask.sh" charset="GBK" />
+		<generate template="bin/crontab/IlibFollowTaskStarter.sh.vm" destfile="bin/crontab/IlibFollowTaskStarter.sh" charset="GBK" />
+		
+		<generate template="webx/webx.xml" destfile="WORLDS-INF/classes/task/webx/webx.xml"  charset="GBK" />
+		<generate template="webx/bean/task-service.xml" destfile="WORLDS-INF/classes/task/webx/bean/task-service.xml"  charset="GBK" />
+		<generate template="webx/common/resources.xml" destfile="WORLDS-INF/classes/task/webx/common/resources.xml"  charset="GBK" />
+		<generate template="webx/common/webx-component-and-root.xml" destfile="WORLDS-INF/classes/task/webx/common/webx-component-and-root.xml"  charset="GBK" />
+     </script>
+</config>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="GB2312"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd"
+    default-autowire="byName">
+    
+	<bean id="bieeExternalService" class="com.alibaba.china.opensql.task.service.BieeExternalService" scope="singleton" />
+	
+    <bean id="byteTemplateService" class="com.alibaba.china.opensql.biz.common.sql.parse.impl.VelocityByteTemplateServiceImpl" init-method="init"/>
+	 
+	<bean id="sqlGeneraterService" class="com.alibaba.china.opensql.biz.common.service.impl.SQLGeneraterServiceImpl">
+	    <property name="filePath" value="$!{opensql_deployhome}/htdocs"/>
+	</bean>
+	
+	<bean id="hiveCFGGenerator" class="com.alibaba.china.opensql.biz.common.sql.generator.impl.HiveCFGGenerator" scope="prototype">
+		<property name="production" value="$!{opensql_production}"/>
+	</bean>
+	<bean id="oracleCFGGenerator" class="com.alibaba.china.opensql.biz.common.sql.generator.impl.OracleCFGGenerator" scope="prototype">
+		<property name="production" value="$!{opensql_production}"/>
+	</bean>
+	<bean id="g3CFGGenerator" class="com.alibaba.china.opensql.biz.common.sql.generator.impl.G3CFGGenerator" scope="prototype">
+		<property name="production" value="$!{opensql_production}"/>
+	</bean>
+	
+	<util:map id="generators">
+		<entry key="oracle">
+			<ref bean="oracleCFGGenerator"/>
+		</entry>
+		<entry key="g3">
+			<ref bean="g3CFGGenerator"/>
+		</entry>
+		<entry key="hive">
+			<ref bean="hiveCFGGenerator"/>
+		</entry>
+	</util:map>
+	<bean id="taskExecuteTaskService" class="com.alibaba.china.opensql.task.service.TaskExecuteTaskService" >
+	 	<property name="jobsURL" value="$!{opensql_fileService_address}/user"/>
+	</bean>
+</beans>
+

@@ -1,0 +1,85 @@
+/*  */
+.five{ width:986px; margin:0 auto; height:740px; border:2px solid #D5D5D5; border-top:0px; margin-bottom:30px; }
+.five .left{ width:148px; height:100%; border-right:2px solid #D5D5D5; background:url(http://yunqigou.com/images/five_01.png) repeat-y;}
+.five .left ul{ width:148px;  float:left; line-height:30px;padding-top:10px;}
+.five .left ul li{ width:108px; padding-left:40px; font-family:\5FAE\8F6F\96C5\9ED1; color:#434343; font-size:12px; float:left; height:30px;}
+.five .left ul a{font-family:\5FAE\8F6F\96C5\9ED1; color:#434343; float:left;}
+.five .left ul li:hover{color:#FE8514; background:#FFF;}
+.five .left span{ padding-left:20px; color:#434343; font-weight:bold;font-family:\5FAE\8F6F\96C5\9ED1; line-height:30px; height:30px; font-size:14px; float:left; width:128px;}
+.five .left .select{color:#FE8514; background:#FFF;}
+.su{ float:left; height:auto;}
+
+.five .right{ width:775px; padding-top:30px; float:left; padding-left:30px; text-align:center;}
+.five .right .top{ width:775px; height:40px; float:left; border-bottom:1px solid #DDDDDD; background:#F1F1F1; color:#666666; }
+.five .right .top p{ height:40px; line-height:40px;font-family:\5FAE\8F6F\96C5\9ED1; font-size:14px;text-align:center;}
+/* 我的订单 */
+.five .right .order-b{ width:225px; float:left; text-align:left;}
+.five .right .order-c{ width:50px; float:left;}
+.five .right .order-d{ width:80px; float:left;}
+.five .right .order-e{ width:120px; float:left;}
+.five .right .order-f{ width:100px; float:left;}
+.five .right .order-g{ width:100px; float:left;}
+.five .right .order-h{ width:100px; float:left;}
+/* 我的金币 */
+.five .right .coin-b{ width:225px; float:left; text-align:center;}
+.five .right .coin-c{ width:200px; float:left;}
+.five .right .coin-d{ width:120px; float:left;}
+.five .right .coin-e{ width:120px; float:left;}
+/* 我的积分 */
+.five .right .fens-b{ width:225px; float:left; text-align:center;}
+.five .right .fens-c{ width:200px; float:left;}
+.five .right .fens-d{ width:120px; float:left;}
+.five .right .fens-e{ width:120px; float:left;}
+
+.five .right ul{ width:775px; float:left; height:50px; padding-top:15px;}
+.five .right ul li{ float:left; line-height:50px; color:#7A7A7A;font-family:\5FAE\8F6F\96C5\9ED1; font-size:12px;}
+.five .right ul li img{ width:40px; height:40px; border:1px solid #E9E9E9; padding-left:12px; padding-right:12px; float:left; padding-top:1px; padding-bottom:1px; margin-right:5px;}
+.fy{ height:40px; float:right; width:700px; padding-top:30px; padding-right:10px; text-align:right;}
+.fy a{margin-left: -6px; border:1px solid #CECECE; padding-top:12px; padding-left:22px; padding-bottom:12px; padding-right:22px; border-left:0px; color:#656565;font-family:\5FAE\8F6F\96C5\9ED1;}
+.fy .shang{ background:#EBEBEB; border-left:1px solid #CECECE;}
+.fy .next{ background:#EBEBEB; border-right:1px solid #CECECE;}
+.fy .ye{ background:#CBCBCB; border-left:1px solid #CECECE;}
+.fy .hou{border-left:1px solid #CECECE;}
+
+/**  充值   */
+.five .right #yue_coin{float:left; height:40px;width:775px;text-align:left;font-size:14px; font-family:\5FAE\8F6F\96C5\9ED1;}
+.five .right #yue_coin #coin_yuan{color:red;font-size:16px; font-family:\5FAE\8F6F\96C5\9ED1;}
+.five .right #conzhi{float:left; height:40px; width:775px;text-align:left;font-size:14px; font-family:\5FAE\8F6F\96C5\9ED1;}
+.five .right #c_jine{width:60px;height:20px;font-size:14px; font-family:\5FAE\8F6F\96C5\9ED1;text-align:right;padding:1px;color:blue;font-weight:bold;}
+.five .right #conzhi #jine_desc{color:red;font-size:12px; font-family:\5FAE\8F6F\96C5\9ED1;}
+.five .right .pay_type{float:left; height:30px; width:775px;text-align:left;font-size:12px; font-family:\5FAE\8F6F\96C5\9ED1;}
+.five .right #select_bank{float:left;width:775px;height: 367px;text-align: left;margin-top: -20px;}
+.five .right .addBtn{float:left; height:40px; width:775px;text-align:left;font-size:14px; font-family:\5FAE\8F6F\96C5\9ED1;}
+.five .right #addCoinBtn{width:80px;height:30px;background-color:#FD7B03;font-size:14px; font-family:\5FAE\8F6F\96C5\9ED1;}
+.five .right .jine_error{height:30px;font-size:14px; font-family:\5FAE\8F6F\96C5\9ED1;font-weight:bold;color:red;}
+
+/** 个人资料 **/
+.five .right .c_coin{float:left; height:40px;width:775px;text-align:left;font-size:14px; font-family:\5FAE\8F6F\96C5\9ED1;}
+.five .right .c_fens{float:left; height:40px;width:775px;text-align:left;font-size:14px; font-family:\5FAE\8F6F\96C5\9ED1;}
+.five .right .c_addr{float:left; height:40px;width:775px;text-align:left;font-size:14px; font-family:\5FAE\8F6F\96C5\9ED1;}
+.five .right .c_disp{font-size:12px; font-weight:bold;font-family:\5FAE\8F6F\96C5\9ED1;}
+.five .right .c_fens .c_tocoin{font-size:10px; font-family:\5FAE\8F6F\96C5\9ED1;}
+.five .right .c_addr{float:left;height:200px;width:500px;}
+.five .right .c_addr .addr{float:left;height:30px;width:500px;font-size:14px; font-family:\5FAE\8F6F\96C5\9ED1;}
+.five .right .c_addr .c_disp_addr{float:left;height:200px;width:500px;font-size:12px; font-family:\5FAE\8F6F\96C5\9ED1;border:1px;border-style: solid;border-color:gray;display:none}
+.five .right .c_addr .c_mail_name{float:left;height:30px;width:400px;font-size:14px; font-family:\5FAE\8F6F\96C5\9ED1;margin-top:10px;padding-left:10px;}
+.five .right .c_addr .c_mail_addr{float:left;height:30px;width:450px;font-size:14px; font-family:\5FAE\8F6F\96C5\9ED1;padding-left:10px;}
+.five .right .c_addr .c_mail_zipcode{float:left;height:30px;width:400px;font-size:14px; font-family:\5FAE\8F6F\96C5\9ED1;padding-left:10px;}
+.five .right .c_addr .c_mail_phone{float:left;height:30px;width:400px;font-size:14px; font-family:\5FAE\8F6F\96C5\9ED1;padding-left:10px;}
+.five .right .c_addr .c_mail_btn{float:left;height:30px;width:400px;font-size:14px; font-family:\5FAE\8F6F\96C5\9ED1;padding-left:10px;}
+.five .right .c_addr .c_mail_btn #btnmail{height:20px;width:60px;margin-top:20px;}
+
+/** 帮助说明 **/
+.five .help{width: 775px;
+padding-top: 10px;
+float: left;
+padding-left: 20px;
+text-align: center;
+text-align:left;
+font-size:18px;
+font-family:\5FAE\8F6F\96C5\9ED1;}
+.five .help .about {margin:10px;}
+.five .help .suanfa{margin:10px;}
+.five .help .peisong{margin:10px;}
+.five .help .title{font-size:18px;font-family:\5FAE\8F6F\96C5\9ED1;font-weight:bold;}
+.five .help .detail{font-size:16px;font-family:\5FAE\8F6F\96C5\9ED1;}

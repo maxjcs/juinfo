@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="GBK"/>
+    <title>聚优影视-后台管理平台</title>
+    <meta name="description" content="聚优影视-后台管理平台"/>
+    <link rel="stylesheet" type="text/css" href="http://www.yunqigou.com/css/lib/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="http://www.yunqigou.com/css/manage/page/header.css"/>
+    <script type="text/javascript" src=" http://www.yunqigou.com/js/global/jquery-1.8.1.min.js"></script>
+    #showStylesheets()
+    #showJavascripts()
+</head>
+<body class="bodyclass">
+	<div id="doc">
+	    $control.setTemplate("header.vm")
+	    $control.setTemplate("leftNav.vm")
+	     $screen_placeholder
+		$control.setTemplate("footer.vm")
+    </div>
+</body>
+</html>

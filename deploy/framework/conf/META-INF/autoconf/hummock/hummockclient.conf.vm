@@ -1,0 +1,23 @@
+ServerAddr "${@appName@_hummock_serveraddr}"
+ServerPort ${@appName@_hummock_serverport}
+LocalAddr 
+LocalUDPPort 12806
+LocalTCPPort 12806
+AreaName @appName@
+RegisterInterval 8
+CheckInterval 12
+User ${@appName@_unix_user}
+Group ${@appName@_unix_user}
+CheckPeer true
+ListSlotNum 80000
+
+EventPacketNum 4
+
+EventPacketSize 1488
+
+LogLevel error
+LogFile "|/usr/alibaba/cronolog/sbin/cronolog ${@appName@_output}/logs/hummock/%w/hummockclient.log"
+PidFile "${@appName@_output}/logs/hummock/hummockclient.pid"
+BlackHitFile "|/usr/alibaba/cronolog/sbin/cronolog  ${@appName@_output}/logs/hummock/%w/hummock_black.hit"
+WhiteHitFile "|/usr/alibaba/cronolog/sbin/cronolog  ${@appName@_output}/logs/hummock/%w/hummock_white.hit"
+UrlWhiteList ""

@@ -1,0 +1,62 @@
+$rundata.setLayout("showlayout.vm");
+
+<div class="wa">
+<div class="content">
+<div class="con_title">您的当前位置：电影 - 喜剧片</div>
+
+<div class="playcon">
+<img src="/filmpic/$!{movie.getPicUrl()}" />
+</div>
+
+<div class="banner2">
+<img src="/images/banner02.gif" />
+<img src="/images/banner02.gif" />
+<img src="/images/banner02.gif" />
+</div>
+
+<div class="clear"></div>
+</div>
+</div>
+
+
+
+<div class="wa">
+<div class="content">
+<div class="con_title">下载播放器</div>
+
+<div class="constkis">
+<a href="#">百度影音</a>    <a href="#">迅雷看看</a>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="wa">
+<div class="content">
+<div class="con_title">视频文件</div>
+
+<div class="constkis">
+<a href="#">预告片</a>    <a href="#">高清</a>
+</div>
+
+</div>
+</div>
+
+<div class="wa">
+<div class="content">
+
+<div class="con_title">相似视频推荐</div>
+
+#foreach($item in $!pageList)
+	<div class="filmcontj"   onmousemove="this.className='filmseleacttj';" onmouseout="this.className='filmcontj';">
+	<a href="${playUrl}?id=${item.id}"><img src="/filmpic/$!{item.getPicUrl()}" /></a>
+	<div class="filmname">
+	<a href="${playUrl}?id=${item.id}">$!{item.subject}</a>
+	</div>
+	</div>
+#end
+
+</div>
+</div>

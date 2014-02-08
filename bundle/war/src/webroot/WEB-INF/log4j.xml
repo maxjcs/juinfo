@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<!--
+  - Log4j配置文件。
+  -
+  - 请使用专用的XML编辑器编辑此文件，以确保其符合log4j.dtd。
+  -
+  - @author Michael Zhou
+ -->
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+    <!-- ===================================================================== -->
+    <!--  以下是appender的定义                                                 								   -->
+    <!-- ===================================================================== -->
+	
+	<!-- project 日志配置-->
+    <appender name="PROJECT" class="com.alibaba.common.logging.spi.log4j.DailyRollingFileAppender">
+        <param name="file" value="F:/workspace/juinfo/output/logs/webx.log"/> 
+				   <param name="append" value="false"/> 
+				<param name="encoding" value="GBK"/>
+		<!-- 如果没有设定level,则按照此级别打印 -->
+        <param name="threshold" value="info"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d [%X{requestURIWithQueryString}] %-5p %c{2} - %m%n"/>
+        </layout>
+    </appender>
+	
+	    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out" />
+        <param name="Threshold" value="ERROR" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p %c{2} - %m%n" />
+        </layout>
+    </appender>
+   
+	
+	<!-- filter 日志配置-->
+	<appender name="FILTER" class="com.alibaba.common.logging.spi.log4j.DailyRollingFileAppender">
+        <param name="file" value="F:/workspace/juinfo/output/logs/webx-filter.log"/>
+        <param name="append" value="false"/>
+        <param name="encoding" value="GBK"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p %c{2} - %m%n"/>
+        </layout>
+    </appender>
+    
+	<!-- velocity 日志配置-->
+    <appender name="VELOCITY" class="com.alibaba.common.logging.spi.log4j.DailyRollingFileAppender">
+        <param name="file" value="F:/workspace/juinfo/output/logs/velocity.log"/>
+        <param name="append" value="false"/>
+        <param name="encoding" value="GBK"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p %c{2} - %m%n"/>
+        </layout>
+    </appender>
+	
+	<!-- velocitySecurity 日志配置-->
+	<appender name="VELOCITYSECURITY" class="com.alibaba.common.logging.spi.log4j.FileAppender">
+        <param name="file" value="F:/workspace/juinfo/output/logs/velocitysecurity.log"/>
+        <param name="append" value="false"/>
+        <param name="encoding" value="GB2312"/>
+        <param name="threshold" value="debug"/>
+        <layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value=" [%X{requestURIWithQueryString}] - %m%n"/>
+		</layout>
+	</appender>
+    
+    <!-- ===================================================================== -->
+    <!--  以下是logger的定义                                                   -->
+    <!-- ===================================================================== -->
+	<!-- filter -->
+    <logger name="com.alibaba.webx.filter" additivity="false">
+        <level value="error"/>
+        <appender-ref ref="FILTER"/>
+    </logger>
+	
+	<!-- VELOCITY -->
+    <logger name="com.alibaba.service.VelocityService" additivity="false"> 
+            	    <level value="error"/> 
+    	    	<appender-ref ref="VELOCITY"/>
+    </logger>
+    
+
+    <logger name="com.alibaba.china.framework" additivity="false"> 
+            	    <level value="debug"/> 
+    	    	<appender-ref ref="PROJECT"/>
+    </logger>
+	
+    <!-- ===================================================================== -->
+    <!--  Root logger的定义                                                    -->
+    <!-- ===================================================================== -->
+    <root>
+        <level value="error"/>
+				<appender-ref ref="CONSOLE"/>
+		        <appender-ref ref="PROJECT"/>
+    </root>
+	
+</log4j:configuration>

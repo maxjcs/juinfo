@@ -1,0 +1,15 @@
+Last Configured at: Fri Mar 08 21:22:35 CST 2013
+
+Base URL: file:/F:/workspace/juinfo/task/src/conf/
+Descriptor: META-INF/autoconf/auto-config.xml
+
+Generating META-INF/autoconf/bin/crontab/FullFeedDataTask.sh.vm => bin/crontab/FullFeedDataTask.sh
+Generating META-INF/autoconf/bin/crontab/BieeExternalTask.sh.vm => bin/crontab/BieeExternalTask.sh
+Generating META-INF/autoconf/webx/common/webx-component-and-root.xml => WORLDS-INF/classes/task/webx/common/webx-component-and-root.xml
+Generating META-INF/autoconf/webx/webx.xml => WORLDS-INF/classes/task/webx/webx.xml
+Generating META-INF/autoconf/webx/common/resources.xml => WORLDS-INF/classes/task/webx/common/resources.xml
+Generating META-INF/autoconf/webx/bean/task-service.xml => WORLDS-INF/classes/task/webx/bean/task-service.xml
+Generating META-INF/autoconf/bin/crontab/IncrementalFeedDataTask.sh.vm => bin/crontab/IncrementalFeedDataTask.sh
+Generating META-INF/autoconf/bin/crontab/TaskExecuteTask.sh.vm => bin/crontab/TaskExecuteTask.sh
+Generating META-INF/autoconf/bin/crontab/IlibFollowTaskStarter.sh.vm => bin/crontab/IlibFollowTaskStarter.sh
+Generating META-INF/autoconf/bin/base_fun.sh.vm => bin/base_fun.sh

@@ -1,0 +1,23 @@
+ServerAddr "${juinfo_hummock_serveraddr}"
+ServerPort ${juinfo_hummock_serverport}
+LocalAddr 
+LocalUDPPort 12806
+LocalTCPPort 12806
+AreaName juinfo
+RegisterInterval 8
+CheckInterval 12
+User ${juinfo_unix_user}
+Group ${juinfo_unix_user}
+CheckPeer true
+ListSlotNum 80000
+
+EventPacketNum 4
+
+EventPacketSize 1488
+
+LogLevel error
+LogFile "|/usr/alibaba/cronolog/sbin/cronolog ${juinfo_output}/logs/hummock/%w/hummockclient.log"
+PidFile "${juinfo_output}/logs/hummock/hummockclient.pid"
+BlackHitFile "|/usr/alibaba/cronolog/sbin/cronolog  ${juinfo_output}/logs/hummock/%w/hummock_black.hit"
+WhiteHitFile "|/usr/alibaba/cronolog/sbin/cronolog  ${juinfo_output}/logs/hummock/%w/hummock_white.hit"
+UrlWhiteList ""

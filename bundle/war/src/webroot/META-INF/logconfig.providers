@@ -1,0 +1,1 @@
+slf4j=com.alibaba.citrus.logconfig.log4j.Log4jConfigurator

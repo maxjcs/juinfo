@@ -1,0 +1,46 @@
+.c-title{
+	width:100%;
+	height:30px;
+	font-size:18px;
+	text-align:left;
+	color:blue;
+	font-weight:bold;
+	padding-top:10px;
+	background-color:#EBF7D1;
+}
+.c-table{
+	width:100%;
+}
+
+
+.c-table .c-line-white{
+	
+	background-color:white;
+	padding:1px;
+}
+.c-table .c-line-whiteSmoke{
+	background-color:whiteSmoke;
+	padding:1px;
+}
+
+.c-td-name{
+	width:30%;
+	text-align:right;	
+}
+.c-td-value{
+	width:70%;
+	text-align:left;	
+}
+
+input[type=text],textarea{
+	width:300px;
+}
+.formclass{
+	position:
+}
+
+.baidu-editor{
+	width:800px;
+	align=center;
+	padding-left:100px
+}

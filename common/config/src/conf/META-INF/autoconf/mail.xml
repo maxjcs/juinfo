@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="gbk"?>
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:beans="http://www.springframework.org/schema/beans" xmlns:util="http://www.springframework.org/schema/util"
+   xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+   xmlns="http://www.alibaba.com/schema/services" xmlns:mail-contents="http://www.alibaba.com/schema/services/mails/contents"
+   xmlns:engines="http://www.alibaba.com/schema/services/template/engines"
+   xmlns:pull-tools="http://www.alibaba.com/schema/services/pull/factories"
+   xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://localhost:8080/schema/www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://localhost:8080/schema/www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+        http://www.alibaba.com/schema/services http://localhost:8080/schema/services.xsd
+        http://www.alibaba.com/schema/services/mails/contents http://localhost:8080/schema/services-mails-contents.xsd
+        http://www.alibaba.com/schema/services/template/engines http://localhost:8080/schema/services-template-engines.xsd
+        http://www.alibaba.com/schema/services/pull/factories http://localhost:8080/schema/services-pull-factories.xsd">
+   <mails id="mailService">
+      
+      <mail-transport id="alibaba.transport" host="$opensql_mail_transport_host" port="$opensql_mail_transport_port"
+          user="$opensql_mail_from_account" password="$opensql_mail_from_account_password">
+         <property name="mail.smtp.connectiontimeout" value="30000" />
+         <property name="mail.smtp.timeout" value="30000" />
+      </mail-transport>
+
+      <!-- 注册激活 邮件-->
+      <mail id="userActiveMail" charset="GBK">
+         <from><![CDATA["运气购平台" <idata@alibaba-inc.com>]]></from>
+         <subject>运气购平台注册激活邮件!</subject>
+         <mail-contents:alternative-content>
+           <mail-contents:html-template-content template="/mail/userActiveMail.vm" />
+         </mail-contents:alternative-content>
+      </mail>
+
+      <!-- 核心派生指标统计数据邮件服务 -->
+      <mail id="ilib-user-category-follow" charset="GBK">
+         <from><![CDATA["傻瓜数据平台" <idata@alibaba-inc.com>]]></from>
+         <subject>傻瓜数据平台!</subject>
+         <mail-contents:alternative-content>
+            <mail-contents:html-template-content template="/mail/ilibUserFollowCategory.vm" />
+         </mail-contents:alternative-content>
+      </mail>
+   </mails>
+</beans:beans>

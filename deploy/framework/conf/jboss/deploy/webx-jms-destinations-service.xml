@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GB2312"?>
+<server>
+    
+    <mbean code="org.jboss.mq.server.jmx.Queue" name="jboss.mq.destination:service=Queue,name=AlibabaWebxQueue">
+        <depends optional-attribute-name="DestinationManager">jboss.mq:service=DestinationManager</depends>
+    </mbean>
+    
+</server>

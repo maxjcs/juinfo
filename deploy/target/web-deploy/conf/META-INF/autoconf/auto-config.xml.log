@@ -1,0 +1,15 @@
+Last Configured at: Thu Jan 23 13:52:21 CST 2014
+
+Base URL: file:/D:/workspace/juinfo/deploy/target/web-deploy/
+Descriptor: conf/META-INF/autoconf/auto-config.xml
+
+Generating conf/META-INF/autoconf/bin/base_env.sh.vm => bin/base_env.sh
+Generating conf/META-INF/autoconf/jetty/conf/start.ini.vm => conf/jetty/conf/start.ini
+Generating conf/META-INF/autoconf/jetty/conf/jetty-logging.xml.vm => conf/jetty/conf/jetty-logging.xml
+Generating conf/META-INF/autoconf/httpd/mod_proxy.conf.vm => conf/httpd/mod_proxy.conf
+Generating conf/META-INF/autoconf/httpd/httpd.conf.vm => conf/httpd/httpd.conf
+Generating conf/META-INF/autoconf/bin/env.sh.vm => bin/env.sh
+Generating conf/META-INF/autoconf/jetty/conf/jetty.xml.vm => conf/jetty/conf/jetty.xml
+Generating conf/META-INF/autoconf/bin/base_env.bat.vm => bin/base_env.bat
+Generating conf/META-INF/autoconf/bin/env.bat.vm => bin/env.bat
+Generating conf/META-INF/autoconf/httpd/httpd_base.conf.vm => conf/httpd/httpd_base.conf

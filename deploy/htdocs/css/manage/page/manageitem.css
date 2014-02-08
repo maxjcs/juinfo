@@ -1,0 +1,68 @@
+td th{
+	display: inline;
+	padding:0px;
+}
+.item-table{
+	background-color:white;
+	font-size:13px;
+	padding:0px;
+	margin:0px;
+	width: 100%;
+}
+.tm-name{
+	width:30%;
+	height:50px;
+	text-align:left;
+}
+.tm-name .td-name-img{
+	/** width:50px; **/
+	height:60px;
+	align:left;
+}
+.tm-price{
+	width:10%;
+	text-algin:right;
+	
+}
+.tm-total-amount{
+	width:10%;
+	text-algin:right;
+}
+.tm-create-time{
+	width:15%;
+	text-algin:center;
+}
+.tm-status{
+	width:15%;
+	text-algin:center;
+}
+.tm-operate{
+	width:20%;
+	text-algin:center;
+	font-size:12px;
+}
+
+.tr-title-line{
+	background-color:#EBF7D1;
+	padding-bottom:1px;
+	line-height:30px;
+	font-size:14px;
+}
+
+.tr-line-white{
+	background-color:white;
+	padding-bottom:1px;
+	line-height:40px;
+}
+
+.tr-line-whitesmoke{
+	background-color:whiteSmoke;
+	padding-bottom:1px;
+	line-height:40px;
+}
+
+
+.td-operate{
+	text-algin:center;
+	font-size:12px;
+}

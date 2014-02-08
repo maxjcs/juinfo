@@ -1,0 +1,68 @@
+$!page.addStyleSheet("/css/manage/page/manageitem.css")
+#set( $tmpJs = $!page.scripts.add("/js/page/manage/manageItem.js") )
+
+<div class="doc">
+	<div class="content">
+    #if($!itemList.size() && $!itemList.size() > 0)
+    <!--table开始-->
+    <table class="item-table">
+
+        <thead>
+            <tr class="tr-title-line">
+                <th>商品名称</th>
+                <th>市场价</th>
+                <th>总份数</th>
+                <th>发布时间</th>
+                <th>商品状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            #if($!itemList.size() && $!itemList.size() > 0)
+            #set($paginator = $!itemList.paginator)
+            #set($i = 0)
+            #set($recordSize=$!itemList.size())
+                #foreach($item in $!itemList)
+                	#set($trClass="tr-line-whitesmoke")
+                	#if($velocityCount % 2 ==0 )
+                		#set($trClass="tr-line-white")
+                	#end
+                    <tr class="$trClass">
+                        <td title="$!item.name" class="tm-name"> 
+                            <img src="$!item.picUrl" alt="$!item.name" class="td-name-img">
+                        	$!stringUtil.abbreviate($!item.name,30)
+                        </td>
+                        <td title="$!item.price" class="tm-price"> $!{item.price} </td>
+                        <td class="tm-total-amount">$!{item.totalAmount}</td>
+                        <td class="tm-create-time" title="$dateUtil.toLocaleString($!item.gmtCreate,'yyyy-MM-dd') ">$dateUtil.toLocaleString($!item.gmtCreate,'yyyy-MM-dd')  </td>
+                        <td class="tm-status" title="$item.itemStatus">#if($item.itemStatus == "1") 正常 #else 下线   #end </td>
+                        <td class="tm-operate">
+                        	<a href=$!upItemListUrl.addQueryData("itemId", $!item.id)>查拍</a>/
+                            <a href=$!modifyItemUrl.addQueryData("id", $!item.id)>修改</a>/
+                           #if($item.itemStatus == "1") <a href=$!upItemUrl.addQueryData("id", $!item.id)>上架</a> #end
+                            ###<a id="a-downitem" dataparamid="$!item.id" href="javascript:void(0)">下线</a> #end
+                        </td>
+                    </tr>
+                #set($i = $i+1)
+                #end
+            #else
+            <p class="no-data"><span>&nbsp;</span></p>
+            #end
+        </tbody>
+    </table>
+    <!-- table结束 -->
+    ##分页
+    <div class="obj-pagination">
+         $control.setTemplate("common:page.vm").setParameter("pageList",$!itemList).setParameter("pageListLink",$!manageItemUrl)
+    </div> 
+    #else
+        <div class="no-data"><span>&nbsp;</span></div>
+    #end
+	</div>
+</div>
+
+<form method="post" id="form1" action="/manage/manageItem.htm">
+		<input type="hidden" name="action" value="ItemAction"/>
+		<input type="hidden" name="event_submit_do_downitem" value="true" />
+		<input type="hidden" id="id" name="id" value="" />
+</form>

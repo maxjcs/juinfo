@@ -1,0 +1,13 @@
+#Wed Feb 13 12:00:30 CST 2013
+eclipse.preferences.version=1
+encoding//src/conf/dal-dao.xml=GBK
+encoding//src/conf/sqlmap.xml=GBK
+encoding//src/conf/sqlmap/sqlmap_Movie.xml=GBK
+encoding//src/conf/sqlmap/sqlmap_MoviePin.xml=GBK
+encoding//src/java/com/hlx/juinfo/dal/biz/dal/dao/MovieDAO.java=GBK
+encoding//src/java/com/hlx/juinfo/dal/biz/dal/dao/MoviePinDAO.java=GBK
+encoding//src/java/com/hlx/juinfo/dal/biz/dal/dao/impl/MovieDAOImpl.java=GBK
+encoding//src/java/com/hlx/juinfo/dal/biz/dal/dao/impl/MoviePinDAOImpl.java=GBK
+encoding//src/java/com/hlx/juinfo/dal/biz/dal/dataobject/MovieDO.java=GBK
+encoding//src/java/com/hlx/juinfo/dal/biz/dal/dataobject/MoviePinDO.java=GBK
+encoding/sqlmap.xml=GBK

@@ -1,0 +1,11 @@
+Last Configured at: Wed Mar 27 13:46:42 CST 2013
+
+Base URL: file:/F:/workspace/juinfo/bundle/war/src/webroot/
+Descriptor: META-INF/autoconf/auto-config.xml
+
+Generating META-INF/autoconf/uris.xml.vm => WEB-INF/common/uris.xml
+Generating META-INF/autoconf/log4j.xml.vm => WEB-INF/log4j.xml
+Generating META-INF/autoconf/resources.xml.vm => WEB-INF/common/resources.xml
+Generating META-INF/autoconf/webx.xml => WEB-INF/webx.xml
+Generating META-INF/autoconf/pipeline.xml => WEB-INF/common/pipeline.xml
+Generating META-INF/autoconf/web.xml.vm => WEB-INF/web.xml

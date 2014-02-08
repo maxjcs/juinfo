@@ -1,0 +1,74 @@
+#=================================================
+
+# 1,JAVA_HOME			eg:/usr/alibaba/java
+# 2,HTTPD_HOME			eg:/usr/alibaba/httpd
+# 3,JETTY_HOME     		eg:/usr/alibaba/jetty
+# 4,JETTY_SERVER_HOME	        eg:/home/admin/web-deploy/jetty_server
+# 5,OUTPUT_HOME			eg:/home/admin/output
+# 6,DEPLOY_HOME			eg:/home/admin/web-deploy
+#==================================================
+JAVA_HOME=${@appName@_javahome}
+HTTPD_HOME=${@appName@_httpdhome}
+JETTY_HOME=${@appName@_jettyhome}
+JETTY_SERVER_HOME=${@appName@_jettyserverhome}
+OUTPUT_HOME=${@appName@_output}
+DEPLOY_HOME=${@appName@_deployhome}
+PRODUCTION=${@appName@_production}
+
+##port config
+APACHE_PORT=${@appName@_port}
+APP_PORT=${@appName@_appserver_port}
+#set($app_port = $numberUtil.createInteger(${@appName@_appserver_port}) )
+#set($debug_port = $app_port + 8 )
+DEBUG_PORT=$debug_port
+
+APP_NAME=@appName@
+UNIX_USER=${@appName@_unix_user}
+
+##jvm args
+JAVA_OPTS_EXT=" -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dapplication.codeset=GBK -Djava.util.logging.config.file=$DEPLOY_HOME/conf/general/logging.properties"
+DATABASE_OPTS=" -Ddatabase.codeset=ISO-8859-1 -Ddatabase.logging=false "
+URI_ENCODING=" -Dorg.eclipse.jetty.util.URI.charset=GBK "
+TIGER_JMX_OPT=" -Dcom.sun.management.config.file=$DEPLOY_HOME/conf/jmx/jmx_monitor_management.properties "
+JAVA_DEBUG_OPT=" -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=$debug_port,server=y,suspend=n "
+## env.sh.vm can override
+#if( ${@appName@_production} == "true" || ${@appName@_production} == "run" )
+	##after the environment of online is all 64-bit,the below if and else judgement can be delete
+    str=`file $JAVA_HOME/bin/java | grep 64-bit`
+    if [ -n "$str" ]; then
+        JAVA_MEM_OPTS=" -server -Xmx2g -Xms2g -Xmn512m -XX:PermSize=128m -XX:MaxPermSize=196m -Xss256k -XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseCMSCompactAtFullCollection -XX:+UseFastAccessorMethods -XX:+UseCMSInitiatingOccupancyOnly -XX:+UseCompressedOops"
+    else
+        JAVA_MEM_OPTS=" -server -Xms1024m -Xmx1024m -XX:NewSize=256m -XX:MaxNewSize=256m -XX:MaxPermSize=128m "
+    fi
+	##productction can't debug
+	JAVA_DEBUG_OPT=" "
+	JAVA_OPTS=" $JAVA_MEM_OPTS $DATABASE_OPTS $JAVA_OPTS_EXT $TIGER_JMX_OPT $URI_ENCODING"
+    production_mode=true;
+#elseif( ${@appName@_production} == "test" )
+	str=`file $JAVA_HOME/bin/java | grep 64-bit`
+    if [ -n "$str" ]; then
+        JAVA_MEM_OPTS=" -DappName=$APP_NAME -server -Xms1024m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=196m -Xss256k -XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseCMSCompactAtFullCollection -XX:+UseFastAccessorMethods -XX:+UseCMSInitiatingOccupancyOnly -XX:+UseCompressedOops"
+    else
+        JAVA_MEM_OPTS=" -DappName=$APP_NAME -server -Xms1024m -Xmx1024m -XX:NewSize=256m -XX:MaxNewSize=256m -XX:MaxPermSize=128m "
+    fi
+	JAVA_OPTS=" $JAVA_MEM_OPTS $DATABASE_OPTS $JAVA_OPTS_EXT $TIGER_JMX_OPT $URI_ENCODING $JAVA_DEBUG_OPT "
+	production_mode=false;
+#else
+	##we shuold reduce resource usage on developing mode
+    JAVA_MEM_OPTS=" -DappName=$APP_NAME -Xms64m -Xmx1024m -XX:MaxPermSize=128m "
+	JAVA_OPTS=" $JAVA_MEM_OPTS $DATABASE_OPTS $JAVA_OPTS_EXT $TIGER_JMX_OPT $URI_ENCODING $JAVA_DEBUG_OPT "
+    production_mode=false;
+#end
+
+cygwin=false;
+case "`uname`" in
+    CYGWIN*)
+        cygwin=true
+        ;;
+esac
+
+if ! $cygwin ; then
+	chmod 600 $DEPLOY_HOME/conf/jmx/*.properties
+fi
+
+export APACHE_PORT APP_PORT DEPLOY_HOME JAVA_OPTS JAVA_HOME HTTPD_HOME JETTY_HOME JETTY_SERVER_HOME OUTPUT_HOME APP_NAME UNIX_USER production_mode cygwin

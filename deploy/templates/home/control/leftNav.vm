@@ -1,0 +1,7 @@
+<div class="lef-nav">
+	  <ul>
+	    <li class="nav-list"><a href="${indexUrl}">首页</a></li>
+		<li class="nav-list"><a href="${createMovieUrl}">视频发布</a></li>
+		<li class="nav-list"><a href="${manageMovieUrl}">视频管理</a></li>
+	  </ul>	
+</div>

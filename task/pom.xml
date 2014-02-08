@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>app</groupId>
+		<artifactId>juinfo</artifactId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<artifactId>juinfo.task</artifactId>
+	<packaging>jar</packaging>
+	<groupId>app</groupId>
+	<name>task</name>
+	<description>Auto converted POM for common</description>
+	<dependencies>
+	 <dependency>
+			<groupId>app</groupId>
+			<artifactId>juinfo.biz.common</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>jar</type>
+	 </dependency>
+	 <dependency>
+			<groupId>app</groupId>
+			<artifactId>juinfo.dal</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>jar</type>
+	 </dependency>
+	 <dependency>
+			<groupId>app</groupId>
+			<artifactId>juinfo.common.config</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>jar</type>
+	 </dependency>	
+	 
+	<dependency>
+	  <groupId>webx</groupId>
+	  <artifactId>toolkit_webx_all_in_one</artifactId>
+	  <version>2.0.3</version>
+	</dependency>
+	<dependency>
+	  <groupId>commons-configuration</groupId>
+	  <artifactId>commons-configuration</artifactId>
+	  <version>1.6</version>
+	</dependency>	
+	<dependency>
+	  <groupId>commons_jelly</groupId>
+	  <artifactId>commons_jelly</artifactId>
+	  <version>1.0</version>
+	  <classifier>RC1</classifier>
+	</dependency>
+	<dependency>
+	  <groupId>commons-beanutils</groupId>
+	  <artifactId>commons-beanutils</artifactId>
+	  <version>1.8.0</version>
+	</dependency>		 
+	</dependencies>
+</project>

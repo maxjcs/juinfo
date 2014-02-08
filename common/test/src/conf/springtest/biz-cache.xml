@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-autowire="byName">
+	<!-- 全局CACHE 管理类 -->
+    <bean id="cacheManager" class="com.alibaba.china.biz.cache.DefaultCacheManager">
+        <property name="cacheStoreProviders">
+            <map>
+                <entry key="MEMCACHEDSTORE">
+                   <ref local="MemcachedStoreProvider"/>
+              </entry>  
+            </map>
+        </property>
+    </bean>
+
+    <!-- 第三方机器的内存缓存机制  -->
+    <bean id="MemcachedStoreProvider" class="com.alibaba.china.biz.cache.store.memcached.MemcachedStoreProvider">
+        <property name="servers">
+            <value>172.29.61.56:60001,172.29.61.56:60002</value>
+        </property>
+    </bean>
+	
+	<bean id="excelDateTemplate" class="com.alibaba.china.biz.cache.PlainCacheTemplate" init-method="init">
+          <property name="cachePolicy">
+            <props>
+                <prop key="refresh.period">86400</prop>
+                <prop key="region">goldcard_excel_upload</prop>
+            </props>
+        </property>
+        <property name="cacheStore">
+            <value>MEMCACHEDSTORE</value>
+        </property>
+    </bean>  
+    
+	<bean id="activeCodeTemplate" class="com.alibaba.china.biz.cache.PlainCacheTemplate"
+		init-method="init">
+		<property name="cachePolicy">
+			<props>
+				<!-- <prop key="refresh.period">1800</prop>  -->
+				<prop key="refresh.period">60</prop>
+				<prop key="region">mobileActiveCode</prop>
+			</props>
+		</property>
+		<property name="cacheStore">
+			<value>MEMCACHEDSTORE</value>
+		</property>
+	</bean>    
+	
+	<bean id="databaseCache" class="com.alibaba.china.biz.cache.PlainCacheTemplate" init-method="init">
+    	<property name="cachePolicy">
+        	<props>
+        	     <prop key="refresh.period">3600</prop>
+    			<prop key="region">goldcard_database_resource</prop>
+    		</props>
+		</property>
+		<property name="cacheStore"><value>MEMCACHEDSTORE</value></property>             
+    </bean>
+</beans>

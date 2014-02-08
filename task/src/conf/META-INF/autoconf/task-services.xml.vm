@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GB2312"?>
+<configuration>
+    <services>
+        <!-- 装载资源的服务。-->
+        <service name="ResourceLoaderService" class="com.alibaba.service.resource.DefaultResourceLoaderService">
+            <property name="resource.descriptors">
+                <value>classpath/task/task-resource.xml</value>
+            </property>
+        </service>
+        						
+        <!-- Spring BeanFactory，以IoC的方式生成beans。 -->
+		<service name="BeanFactoryService" class="com.alibaba.service.spring.DefaultBeanFactoryService">
+            <property name="bean.descriptors">
+                <value>/task/biz-service.xml</value>
+				<value>/task/task-common.xml</value>
+				<value>/task/biz-dao.xml</value>
+ 				<value>/task/bean-external.xml</value>
+				<value>/task/opensearch-jobs.xml</value>
+            </property>
+        </service>
+    </services>	
+    
+</configuration>
