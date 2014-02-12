@@ -5,21 +5,21 @@
 		#set ( $pages = $paginator.getSlider(8))
 			
 		#if(!$paginator.isDisabledPage($paginator.previousPage))
-			<a href="${pageListLink}?&type=${type}&pageNum=${paginator.previousPage}" class="shang" title="上一页">上一页</a>
+			<a href="http://yunqigou.com/home/page/num-${paginator.previousPage}.htm" class="shang" title="上一页">上一页</a>
 		#else
 			<a title="上一页" class="shang">上一页</a>
 		#end
 	
 		#foreach ($p in $pages)
 			#if ($paginator.isDisabledPage($p))
-				<a href="#" class="ye">$p</a>
+				<a href="#" class="ye">${p}</a>
 			#else
-				<a href="${pageListLink}?&type=${type}&pageNum=$p">$p</a>
+				<a href="http://yunqigou.com/home/page/num-${p}.htm">$p</a>
 			#end
 		#end
 	
 		#if(!$paginator.isDisabledPage($paginator.nextPage))
-			<a href="${pageListLink}?&type=${type}&pageNum=${paginator.nextPage}" class="next" title="下一页">下一页</a>
+			<a href="http://yunqigou.com/home/page/num-${paginator.nextPage}.htm" class="next" title="下一页">下一页</a>
 		#else
 			<a title="下一页" class="next">下一页</a>
 		#end

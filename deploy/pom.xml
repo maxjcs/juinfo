@@ -46,6 +46,7 @@
 				<groupId>ali.plugins</groupId>
 				<artifactId>maven-car-plugin</artifactId>
 				<extensions>true</extensions>
+				<version>0.1</version>
 			</plugin>
 		
 			<plugin>

@@ -15,14 +15,14 @@ $rundata.setLayout("showlayout.vm");
 <p>语言：$!{movie.language} </p>
 <p>上映时间：2012-12-12</p>
 <p>剧情：$!{movie.detail}  <a href="#">详细剧情</a></p>
-<a href="${playUrl}?id=${movie.id}" class="bottomstyle" />播放</a>
+<a href="http://yunqigou.com/home/play/id-${movie.id}.htm" />播放</a>
 </div>
 
 </div>
 
 <div class="banner2">
-<img src="/images/banner02.gif" />
-<img src="/images/banner02.gif" />
+##alimama广告##
+<script charset="gbk" src="http://p.tanx.com/ex?i=mm_24882979_5504217_16762269"></script>
 
 </div>
 
@@ -35,7 +35,7 @@ $rundata.setLayout("showlayout.vm");
 <div class="con_title">视频文件</div>
 
 <div class="constkis">
-<a href="${playUrl}?id=${movie.id}">预告片</a>    <a href="${playUrl}?id=${movie.id}">高清</a>
+<a href="http://yunqigou.com/home/play/id-${movie.id}.htm">预告片</a>    <a href="http://yunqigou.com/home/play/id-${movie.id}.htm">高清</a>
 </div>
 
 </div>
@@ -47,9 +47,9 @@ $rundata.setLayout("showlayout.vm");
 
 #foreach($item in $!pageList)
 	<div class="filmcontj"   onmousemove="this.className='filmseleacttj';" onmouseout="this.className='filmcontj';">
-	<a href="${playUrl}?id=${item.id}"><img src="/filmpic/$!{item.getPicUrl()}" /></a>
+	<a href="http://yunqigou.com/home/play/id-${item.id}.htm"><img src="/filmpic/$!{item.getPicUrl()}" /></a>
 	<div class="filmname">
-	<a href="${playUrl}?id=${item.id}">$!{item.subject}</a>
+	<a href="http://yunqigou.com/home/play/id-${item.id}.htm">$!{item.subject}</a>
 	</div>
 	</div>
 #end

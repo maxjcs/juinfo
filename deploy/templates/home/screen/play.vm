@@ -51,9 +51,9 @@ $rundata.setLayout("showlayout.vm");
 
 #foreach($item in $!pageList)
 	<div class="filmcontj"   onmousemove="this.className='filmseleacttj';" onmouseout="this.className='filmcontj';">
-	<a href="${playUrl}?id=${item.id}"><img src="/filmpic/$!{item.getPicUrl()}" /></a>
+	<a href="http://yunqigou.com/home/detail/id-${item.id}.htm"><img src="/filmpic/$!{item.getPicUrl()}" /></a>
 	<div class="filmname">
-	<a href="${playUrl}?id=${item.id}">$!{item.subject}</a>
+	<a href="http://yunqigou.com/home/play/id-${item.id}.htm">$!{item.subject}</a>
 	</div>
 	</div>
 #end

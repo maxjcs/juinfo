@@ -14,17 +14,38 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
+</script>
 
 </head>
 
 <body>
-<div class="main">      <!--MAIN START-->
-
-		$control.setTemplate("showheader.vm")
-	     $screen_placeholder
-		$control.setTemplate("showfooter.vm")
-		
-</div>                  <!--MAIN END-->
+<div class="global">
+	<div class="ad_left">
+	<script type="text/javascript">
+	var sogou_ad_id=306934;
+	var sogou_ad_height=600;
+	var sogou_ad_width=120;
+	</script>
+	<script language='JavaScript' type='text/javascript' src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
+	</div>
+	<!--MAIN START-->
+	<div class="main">      
+			
+			$control.setTemplate("showheader.vm")
+		     $screen_placeholder
+			$control.setTemplate("showfooter.vm")
+			
+	</div> 
+	<!--MAIN END-->                 
+	<div class="ad_right">
+	<script type="text/javascript">
+	var sogou_ad_id=306934;
+	var sogou_ad_height=600;
+	var sogou_ad_width=120;
+	</script>
+	<script language='JavaScript' type='text/javascript' src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
+	</div>
+</div>
 
 </body>
 

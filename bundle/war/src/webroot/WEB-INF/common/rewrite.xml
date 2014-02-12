@@ -11,10 +11,16 @@
 		<rule pattern="/index.htm(l)?">
 			<substitution uri="/home/page.htm" flags="L,QSA" />
 		</rule>
-		<!-- ½¡¿µ¼ì²éurl -->
-	    <rule pattern="/monitor/ok.htm">
-	        <substitution uri="/home/healthChecker.do" flags="L QSA"/>
-	    </rule> 
+
+	    <rule pattern="/home/detail/id-([0-9]+)\.htm">
+	        <substitution uri="/home/detail.htm?id=$1" flags="L,R"/>
+	    </rule>
+	    <rule pattern="/home/play/id-([0-9]+)\.htm">
+	        <substitution uri="/home/play.htm?id=$1" flags="L,R"/>
+	    </rule>
+	    <rule pattern="/home/page/num-([0-9]+)\.htm">
+	        <substitution uri="/home/page.htm?pageNum=$1" flags="L,R"/>
+	    </rule>
 	</request-contexts:rewrite>
 
 </beans:beans>

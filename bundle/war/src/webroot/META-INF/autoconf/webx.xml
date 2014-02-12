@@ -100,7 +100,7 @@
 	<services:module-loader>
 		<ml-factories:class-modules>
 			<ml-factories:search-packages type="$1"
-				packages="com.hlx.luckbuy.common.*"></ml-factories:search-packages>
+				packages="com.hlx.juinfo.common.*"></ml-factories:search-packages>
 		</ml-factories:class-modules>
 	</services:module-loader>
 </beans:beans>
